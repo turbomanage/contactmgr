@@ -1,6 +1,7 @@
 package com.example.contacts.app.client.service;
 
-import com.example.contacts.app.client.domain.User;
+
+import com.example.contacts.common.domain.User;
 
 /**
  * Singleton that represents the current state of the UI. Getters

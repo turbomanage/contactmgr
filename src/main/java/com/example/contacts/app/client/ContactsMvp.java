@@ -4,12 +4,12 @@
 
 package com.example.contacts.app.client;
 
-import com.example.contacts.app.client.domain.User;
 import com.example.contacts.app.client.mvp.AppActivityMapper;
 import com.example.contacts.app.client.place.HomePlace;
 import com.example.contacts.app.client.service.AppCallback;
 import com.example.contacts.app.client.service.LoginInfoService;
 import com.example.contacts.common.client.ui.web.AppStyles;
+import com.example.contacts.common.domain.User;
 import com.google.gwt.activity.shared.ActivityManager;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.core.client.EntryPoint;

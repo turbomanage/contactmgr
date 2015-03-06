@@ -25,7 +25,6 @@
         <selenium.version>2.43.1</selenium.version>
         <selenium.skip>false</selenium.skip>
         <gwt.driver.version>0.0.1-SNAPSHOT</gwt.driver.version>
-        <gxt.driver.version>${gwt.driver.version}</gxt.driver.version>
         <gwt.compiler.strict>true</gwt.compiler.strict>
         <gwt.test.testTimeOut>480</gwt.test.testTimeOut>
     </properties>
@@ -34,12 +33,6 @@
             <id>sonatype-releases</id>
             <url>https://oss.sonatype.org/content/repositories/releases</url>
             <name>Sonatype Releases</name>
-        </repository>
-        <repository>
-            <id>sencha-gxt-repository</id>
-            <name>Sencha GXT Repository</name>
-            <!-- Commercial (with Support) -->
-            <url>https://maven.sencha.com/repo/gxt-commercial-release</url>
         </repository>
     </repositories>
     <dependencies>
@@ -219,23 +212,6 @@
             <version>1.9.5</version>
         </dependency>
 
-        <!--GXT-->
-        <dependency>
-            <groupId>com.sencha.gxt</groupId>
-            <artifactId>gxt</artifactId>
-            <version>${gxt.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sencha.gxt</groupId>
-            <artifactId>gxt-chart</artifactId>
-            <version>${gxt.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sencha.gxt</groupId>
-            <artifactId>gxt-theme-neptune</artifactId>
-            <version>${gxt.version}</version>
-        </dependency>
-
         <!-- Selenium -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -253,12 +229,6 @@
             <groupId>org.senchalabs.gwt</groupId>
             <artifactId>gwt-driver</artifactId>
             <version>${gwt.driver.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.senchalabs.gwt</groupId>
-            <artifactId>gxt-driver</artifactId>
-            <version>${gxt.driver.version}</version>
             <scope>provided</scope>
         </dependency>
 

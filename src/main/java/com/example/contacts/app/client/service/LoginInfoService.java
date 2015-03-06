@@ -1,6 +1,6 @@
 package com.example.contacts.app.client.service;
 
-import com.example.contacts.app.client.domain.User;
+import com.example.contacts.common.domain.User;
 import org.fusesource.restygwt.client.MethodCallback;
 import org.fusesource.restygwt.client.RestService;
 

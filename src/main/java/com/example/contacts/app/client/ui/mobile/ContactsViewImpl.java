@@ -1,17 +1,16 @@
 package com.example.contacts.app.client.ui.mobile;
 
 import com.example.contacts.app.client.api.ContactsView;
-import com.example.contacts.app.client.domain.ContactProperties;
 import com.example.contacts.common.client.ui.web.ViewImpl;
 import com.example.contacts.common.domain.Contact;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiFactory;
 import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.user.cellview.client.CellTable;
+import com.google.gwt.user.cellview.client.TextColumn;
 import com.google.gwt.user.client.ui.Widget;
-import com.sencha.gxt.core.client.IdentityValueProvider;
-import com.sencha.gxt.data.shared.ListStore;
-import com.sencha.gxt.widget.core.client.ListView;
+import com.google.gwt.view.client.ListDataProvider;
 
 /**
  * Created by david on 2/26/15.
@@ -19,18 +18,31 @@ import com.sencha.gxt.widget.core.client.ListView;
 public class ContactsViewImpl extends ViewImpl<ContactsView.Delegate> implements ContactsView {
 
     // init store
-    private final ContactProperties contactProperties = GWT.create(ContactProperties.class);
-    private final ListStore<Contact> contactStore = new ListStore<Contact>(contactProperties.id());
+    private final ListDataProvider<Contact> contactStore = new ListDataProvider<Contact>();
 
     interface OurUiBinder extends UiBinder<Widget, ContactsViewImpl> { }
     private static OurUiBinder ourUiBinder = GWT.create(OurUiBinder.class);
 
     @UiField
-    public ListView<Contact, Contact> contactListView;
+    public CellTable<Contact> contactCellTable;
 
     @UiFactory
-    public ListView<Contact, Contact> makeListView() {
-        return new ListView(contactStore, new IdentityValueProvider<Contact>(), new ContactCell());
+    public CellTable<Contact> makeContactsTable() {
+        CellTable<Contact> contactsTable = new CellTable<Contact>();
+        contactsTable.addColumn(new TextColumn<Contact>() {
+            @Override
+            public String getValue(Contact contact) {
+                return contact.getFirstName();
+            }
+        });
+        contactsTable.addColumn(new TextColumn<Contact>() {
+            @Override
+            public String getValue(Contact contact) {
+                return contact.getLastName();
+            }
+        });
+        contactStore.addDataDisplay(contactsTable);
+        return contactsTable;
     }
 
     public ContactsViewImpl() {
@@ -38,7 +50,7 @@ public class ContactsViewImpl extends ViewImpl<ContactsView.Delegate> implements
     }
 
     @Override
-    public ListStore<Contact> getStore() {
+    public ListDataProvider<Contact> getStore() {
         return contactStore;
     }
 

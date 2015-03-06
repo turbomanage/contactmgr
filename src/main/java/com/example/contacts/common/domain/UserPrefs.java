@@ -1,4 +1,4 @@
-package com.example.contacts.app.client.domain;
+package com.example.contacts.common.domain;
 
 import com.googlecode.objectify.annotation.Index;
 

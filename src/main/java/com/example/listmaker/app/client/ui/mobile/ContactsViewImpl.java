@@ -11,11 +11,7 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Widget;
 import com.sencha.gxt.core.client.IdentityValueProvider;
 import com.sencha.gxt.data.shared.ListStore;
-import com.sencha.gxt.widget.core.client.ContentPanel;
 import com.sencha.gxt.widget.core.client.ListView;
-import com.sencha.gxt.widget.core.client.container.CenterLayoutContainer;
-import com.sencha.gxt.widget.core.client.container.CssFloatLayoutContainer;
-import com.sencha.gxt.widget.core.client.container.FlowLayoutContainer;
 
 /**
  * Created by david on 2/26/15.
@@ -28,10 +24,7 @@ public class ContactsViewImpl extends ViewImpl<ContactsView.Delegate> implements
 
     interface OurUiBinder extends UiBinder<Widget, ContactsViewImpl> { }
     private static OurUiBinder ourUiBinder = GWT.create(OurUiBinder.class);
-    @UiField
-    public CssFloatLayoutContainer.CssFloatData floatData;
-//    @UiField
-//    public FlowLayoutContainer flowLayoutContainer;
+
     @UiField
     public ListView<Contact, Contact> contactListView;
 

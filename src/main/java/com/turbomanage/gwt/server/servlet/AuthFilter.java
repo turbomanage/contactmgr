@@ -1,10 +1,10 @@
 package com.turbomanage.gwt.server.servlet;
 
-import com.example.listmaker.common.domain.User;
-import com.example.listmaker.common.domain.UserSession;
-import com.example.listmaker.server.auth.LoginHelper;
-import com.example.listmaker.server.domain.AuthCookie;
-import com.example.listmaker.server.service.common.AppUserService;
+import com.example.contacts.common.domain.User;
+import com.example.contacts.common.domain.UserSession;
+import com.example.contacts.server.auth.LoginHelper;
+import com.example.contacts.server.domain.AuthCookie;
+import com.example.contacts.server.service.common.AppUserService;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -27,9 +27,9 @@ public class AuthFilter implements Filter {
         HttpServletResponse httpRes = (HttpServletResponse) resp;
         perThreadRequest.set(httpReq);
         String path = httpReq.getRequestURI().substring(((HttpServletRequest) req).getContextPath().length());
-        if (path.startsWith("/listmaker/login")
-                || path.startsWith("/listmaker/signup")
-                || path.startsWith("/listmaker/remote_logging")) {
+        if (path.startsWith("/contacts/login")
+                || path.startsWith("/contacts/signup")
+                || path.startsWith("/contacts/remote_logging")) {
             // login URLs don't require auth
             chain.doFilter(req, resp);
         } else {
@@ -39,7 +39,7 @@ public class AuthFilter implements Filter {
             } else {
                 // not logged in
                 // if an API call, return JSON response
-                if (path.startsWith("/listmaker/api")) {
+                if (path.startsWith("/contacts/api")) {
                     ((HttpServletResponse) resp).setStatus(401);
                     resp.setContentType(MediaType.TEXT_PLAIN);
                     resp.getWriter().write("User must log in");

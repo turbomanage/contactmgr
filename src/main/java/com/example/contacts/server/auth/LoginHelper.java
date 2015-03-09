@@ -19,7 +19,7 @@ public abstract class LoginHelper {
     private static final Logger log = Logger.getLogger( LoginHelper.class.getName() );
 
     protected static final String APPLICATION_NAME = "Contacts";
-    private static final String APP_URL = "/contacts/app/index.html";
+    private static final String APP_URL = "/contacts/app/index.jsp";
     public static final String AUTH_COOKIE_KEY = "authCookie";
     protected static final AppUserService appUserSvc = new AppUserServiceImpl();
 
@@ -58,9 +58,11 @@ public abstract class LoginHelper {
      */
     public static Cookie getCookie(HttpServletRequest req, String cookieName) {
         final Cookie[] cookies = req.getCookies();
-        for (Cookie c : cookies) {
-            if (c.getName().equals(cookieName)) {
-                return c;
+        if (cookies != null) {
+            for (Cookie c : cookies) {
+                if (c.getName().equals(cookieName)) {
+                    return c;
+                }
             }
         }
         return null;

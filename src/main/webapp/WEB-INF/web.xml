@@ -67,7 +67,8 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
 
     <servlet-mapping>
         <servlet-name>jerseyServlet</servlet-name>
-        <url-pattern>/contacts/*</url-pattern>
+        <!-- Restrict to API or Jersey servlet will override headers from AuthFilter -->
+        <url-pattern>/contacts/api/*</url-pattern>
     </servlet-mapping>
 
     <!-- new user servlet -->
@@ -115,7 +116,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
 
     <!-- Default page to serve -->
     <welcome-file-list>
-        <welcome-file>login</welcome-file>
+        <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 
     <security-constraint>

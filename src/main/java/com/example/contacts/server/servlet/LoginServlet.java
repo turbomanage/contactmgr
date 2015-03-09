@@ -29,7 +29,7 @@ public class LoginServlet extends HttpServlet {
         User registeredUser = userService.tryLogin(email, password);
         if (registeredUser == null) {
             // Invalid username or password
-            resp.sendRedirect("/login.html");
+            resp.sendRedirect(AuthFilter.LOGIN_FORM);
             return;
         }
         // username and password matched
@@ -42,6 +42,7 @@ public class LoginServlet extends HttpServlet {
             AuthCookie newAuthCookie = LoginHelper.makeSessionCookie(newSession);
             resp.addCookie(newAuthCookie.getCookie());
         }
+//        req.getRequestDispatcher(LoginHelper.getAppUrl(req)).forward(req, resp);
         resp.sendRedirect(LoginHelper.getAppUrl(req));
     }
 

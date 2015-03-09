@@ -14,7 +14,7 @@ import java.io.IOException;
 
 
 public class AuthFilter implements Filter {
-    private static final String LOGIN_FORM = "/login.html";
+    public static final String LOGIN_FORM = "/login.html";
     public static final String USER_KEY = "loggedInUser";
     public static final String TOKEN = "token";
 

@@ -16,7 +16,7 @@
 <!-- be added before this line.                -->
 <!--                                           -->
 <script type="text/javascript" language="javascript"
-	src="/contactsmgr/contactmgr.nocache.js"></script>
+	src="/contactmgr/contactmgr.nocache.js"></script>
 </head>
 
 <body>

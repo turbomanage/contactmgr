@@ -5,10 +5,10 @@ with GWT Activities & Places and Resty-GWT on the client.
 
 ### Community ###
 
-Use the [issue tracker](https://github.com/turbomanage/contacts/issues) to report bugs or request enhancements.
+Use the [issue tracker](https://github.com/turbomanage/contactmgr/issues) to report bugs or request enhancements.
 
 ### Download the sample ###
- 1. ```git clone https://github.com/turbomanage/contacts.git```
+ 1. ```git clone https://github.com/turbomanage/contactmgr.git```
  1. If you don't already have it, [install Maven 3](http://maven.apache.org/download.cgi).
 
 ### Run the sample ###

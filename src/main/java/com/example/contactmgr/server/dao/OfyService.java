@@ -1,8 +1,8 @@
 package com.example.contactmgr.server.dao;
 
-import com.example.listmaker.app.shared.domain.Contact;
-import com.example.listmaker.app.shared.domain.User;
-import com.example.listmaker.server.domain.UserSession;
+import com.example.contactmgr.app.shared.domain.Contact;
+import com.example.contactmgr.app.shared.domain.User;
+import com.example.contactmgr.server.domain.UserSession;
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
 import com.googlecode.objectify.ObjectifyService;

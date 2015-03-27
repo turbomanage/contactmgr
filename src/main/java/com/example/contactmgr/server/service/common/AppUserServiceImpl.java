@@ -1,12 +1,12 @@
 package com.example.contactmgr.server.service.common;
 
 import ca.defuse.PasswordHash;
-import com.example.contactmgr.server.dao.UserSessionDao;
-import com.example.listmaker.app.shared.domain.User;
+import com.example.contactmgr.app.shared.domain.User;
 import com.example.contactmgr.server.dao.UserDao;
-import com.example.listmaker.server.domain.AuthCookie;
-import com.example.listmaker.server.domain.UserSession;
-import com.example.listmaker.server.exception.DuplicateUserException;
+import com.example.contactmgr.server.dao.UserSessionDao;
+import com.example.contactmgr.server.domain.AuthCookie;
+import com.example.contactmgr.server.domain.UserSession;
+import com.example.contactmgr.server.exception.DuplicateUserException;
 import com.googlecode.objectify.Ref;
 import com.turbomanage.gwt.exception.TooManyResultsException;
 
@@ -23,7 +23,7 @@ import java.util.logging.Logger;
  *
  * @author David Chandler
  */
-public class AppUserServiceImpl implements com.example.listmaker.server.service.common.AppUserService {
+public class AppUserServiceImpl implements AppUserService {
 
     private static final Logger LOG = Logger.getLogger(AppUserServiceImpl.class.getName());
     private static final String LOGIN_URL = "/";

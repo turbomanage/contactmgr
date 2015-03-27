@@ -1,7 +1,7 @@
 package com.example.contactmgr.server.auth;
 
-import com.example.listmaker.app.shared.domain.User;
-import com.example.listmaker.server.exception.DuplicateUserException;
+import com.example.contactmgr.app.shared.domain.User;
+import com.example.contactmgr.server.exception.DuplicateUserException;
 import com.example.contactmgr.server.exception.RestException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.turbomanage.gwt.server.servlet.AuthFilter;

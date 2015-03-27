@@ -39,11 +39,11 @@
     <set-property name="gwt.logging.consoleHandler" value="ENABLED"/>
 
     <!-- Specify the app entry point class.                         -->
-    <entry-point class='com.example.contacts.app.client.ContactsMvp' />
+    <entry-point class='com.example.contactmgr.app.client.ContactManager' />
 
     <!-- Use ClientFactoryImpl by default -->
-    <replace-with class="com.example.contacts.app.client.ClientFactoryImpl">
-        <when-type-is class="com.example.contacts.app.client.ClientFactory"/>
+    <replace-with class="com.example.contactmgr.app.client.ClientFactoryImpl">
+        <when-type-is class="com.example.contactmgr.app.client.ClientFactory"/>
     </replace-with>
 
     <set-property name="compiler.stackMode" value="strip"/>

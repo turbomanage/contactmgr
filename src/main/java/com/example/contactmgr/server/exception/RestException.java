@@ -1,6 +1,6 @@
 package com.example.contactmgr.server.exception;
 
-import com.example.listmaker.app.shared.ExceptionWrapper;
+import com.example.contactmgr.app.shared.ExceptionWrapper;
 
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;

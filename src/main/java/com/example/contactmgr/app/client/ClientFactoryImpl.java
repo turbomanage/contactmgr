@@ -1,9 +1,10 @@
 package com.example.contactmgr.app.client;
 
-import com.example.listmaker.app.client.ui.mobile.ContactDetailView;
-import com.example.listmaker.app.client.ui.mobile.ContactDetailViewImpl;
-import com.example.listmaker.app.client.ui.mobile.ContactsView;
-import com.example.listmaker.app.client.ui.mobile.ContactsViewImpl;
+import com.example.contactmgr.app.client.ui.mobile.ContactDetailView;
+
+import com.example.contactmgr.app.client.ui.mobile.ContactDetailViewImpl;
+import com.example.contactmgr.app.client.ui.mobile.ContactsView;
+import com.example.contactmgr.app.client.ui.mobile.ContactsViewImpl;
 
 /**
  * Manages instances of Views.

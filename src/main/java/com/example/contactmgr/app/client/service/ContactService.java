@@ -1,6 +1,6 @@
 package com.example.contactmgr.app.client.service;
 
-import com.example.listmaker.app.shared.domain.Contact;
+import com.example.contactmgr.app.shared.domain.Contact;
 import com.turbomanage.gwt.client.rest.ListResponse;
 import com.turbomanage.gwt.client.rest.RestApi;
 import org.fusesource.restygwt.client.MethodCallback;

@@ -1,7 +1,5 @@
 package com.example.contactmgr.app.shared.domain;
 
-import com.example.listmaker.app.shared.domain.Owned;
-import com.example.listmaker.app.shared.domain.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.googlecode.objectify.Ref;
 import com.googlecode.objectify.annotation.Entity;

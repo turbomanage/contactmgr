@@ -1,6 +1,6 @@
 package com.example.contactmgr.server.domain;
 
-import com.example.contacts.server.auth.LoginHelper;
+import com.example.contactmgr.server.auth.LoginHelper;
 
 import javax.servlet.http.Cookie;
 

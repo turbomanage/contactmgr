@@ -1,7 +1,7 @@
 package com.example.contactmgr.app.client.mvp;
 
-import com.example.listmaker.app.client.place.ContactDetailPlace;
-import com.example.listmaker.app.client.place.ContactsPlace;
+import com.example.contactmgr.app.client.place.ContactDetailPlace;
+import com.example.contactmgr.app.client.place.ContactsPlace;
 import com.google.gwt.place.shared.PlaceHistoryMapper;
 import com.google.gwt.place.shared.WithTokenizers;
 

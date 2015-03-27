@@ -1,8 +1,8 @@
 package com.example.contactmgr.server.dao;
 
-import com.example.listmaker.app.shared.domain.Owned;
-import com.example.listmaker.app.shared.domain.User;
-import com.example.listmaker.common.domain.ListWrapper;
+import com.example.contactmgr.app.shared.domain.Owned;
+import com.example.contactmgr.app.shared.domain.User;
+import com.example.contactmgr.common.domain.ListWrapper;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Ref;
 import com.turbomanage.gwt.exception.TooManyResultsException;

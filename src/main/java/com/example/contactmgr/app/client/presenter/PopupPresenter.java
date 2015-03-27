@@ -1,7 +1,7 @@
 package com.example.contactmgr.app.client.presenter;
 
-import com.example.contactmgr.common.client.ui.web.View;
 import com.example.contactmgr.common.client.presenter.Presenter;
+import com.example.contactmgr.common.client.ui.web.View;
 
 /**
  * Created by Gene on 6/5/2014.

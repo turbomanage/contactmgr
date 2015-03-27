@@ -1,8 +1,8 @@
 package com.example.contactmgr.app.client.service;
 
-import com.example.listmaker.app.client.domain.ContactProperties;
-import com.example.listmaker.app.shared.domain.Contact;
-import com.example.listmaker.app.shared.domain.User;
+import com.example.contactmgr.app.client.domain.ContactProperties;
+import com.example.contactmgr.app.shared.domain.Contact;
+import com.example.contactmgr.app.shared.domain.User;
 import com.google.gwt.core.client.GWT;
 import com.sencha.gxt.data.shared.ListStore;
 

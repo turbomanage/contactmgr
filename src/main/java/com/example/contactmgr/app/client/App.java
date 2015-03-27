@@ -1,6 +1,9 @@
 package com.example.contactmgr.app.client;
 
 import com.example.contactmgr.app.client.mvp.AppPlaceHistoryMapper;
+import com.example.contactmgr.app.client.service.AppModel;
+import com.example.contactmgr.app.client.ui.mobile.ServiceFactory;
+import com.example.contactmgr.app.client.ui.mobile.ServiceFactoryImpl;
 import com.example.contactmgr.app.client.ui.web.images.AppImages;
 import com.google.gwt.core.shared.GWT;
 import com.google.gwt.event.shared.SimpleEventBus;

@@ -1,6 +1,6 @@
 package com.example.contactmgr.app.client.service;
 
-import com.example.listmaker.app.shared.domain.User;
+import com.example.contactmgr.app.shared.domain.User;
 import org.fusesource.restygwt.client.MethodCallback;
 import org.fusesource.restygwt.client.RestService;
 

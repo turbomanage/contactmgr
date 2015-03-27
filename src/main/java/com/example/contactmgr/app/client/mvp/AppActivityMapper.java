@@ -1,5 +1,9 @@
 package com.example.contactmgr.app.client.mvp;
 
+import com.example.contactmgr.app.client.place.ContactDetailPlace;
+import com.example.contactmgr.app.client.place.ContactsPlace;
+import com.example.contactmgr.app.client.presenter.ContactDetailActivity;
+import com.example.contactmgr.app.client.presenter.ContactsActivity;
 import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.place.shared.Place;

@@ -1,7 +1,7 @@
 package com.example.contactmgr.app.client.ui.mobile;
 
-import com.example.listmaker.common.client.ui.web.ViewImpl;
-import com.example.listmaker.app.shared.domain.Contact;
+import com.example.contactmgr.app.shared.domain.Contact;
+import com.example.contactmgr.common.client.ui.web.ViewImpl;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;

@@ -1,6 +1,5 @@
 package com.example.contactmgr.app.client.ui.mobile;
 
-import com.example.contactmgr.app.client.api.ContactsView;
 import com.example.contactmgr.common.client.ui.web.ViewImpl;
 import com.example.contactmgr.common.domain.Contact;
 import com.google.gwt.core.client.GWT;
@@ -47,11 +46,6 @@ public class ContactsViewImpl extends ViewImpl<ContactsView.Delegate> implements
 
     public ContactsViewImpl() {
         initWidget(ourUiBinder.createAndBindUi(this));
-    }
-
-    @Override
-    public ListDataProvider<Contact> getStore() {
-        return contactStore;
     }
 
 }

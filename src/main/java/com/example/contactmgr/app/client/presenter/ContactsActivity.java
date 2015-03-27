@@ -1,11 +1,11 @@
 package com.example.contactmgr.app.client.presenter;
 
-import com.example.listmaker.app.client.App;
-import com.example.listmaker.app.client.place.ContactDetailPlace;
-import com.example.listmaker.app.client.service.AppCallback;
+import com.example.contactmgr.app.client.App;
+import com.example.contactmgr.app.client.place.ContactDetailPlace;
+import com.example.contactmgr.app.client.service.AppCallback;
 import com.example.contactmgr.app.client.service.ContactService;
-import com.example.listmaker.app.client.ui.mobile.ContactsView;
-import com.example.listmaker.app.shared.domain.Contact;
+import com.example.contactmgr.app.client.ui.mobile.ContactsView;
+import com.example.contactmgr.app.shared.domain.Contact;
 import com.example.contactmgr.common.client.presenter.ActivityPresenter;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;

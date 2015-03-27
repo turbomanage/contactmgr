@@ -1,10 +1,10 @@
 package com.example.contactmgr.server.servlet;
 
+import com.example.contactmgr.app.shared.domain.User;
 import com.example.contactmgr.server.auth.LoginHelper;
-import com.example.listmaker.app.shared.domain.User;
-import com.example.listmaker.server.domain.AuthCookie;
-import com.example.listmaker.server.domain.UserSession;
-import com.example.listmaker.server.service.common.AppUserService;
+import com.example.contactmgr.server.domain.AuthCookie;
+import com.example.contactmgr.server.domain.UserSession;
+import com.example.contactmgr.server.service.common.AppUserService;
 import com.turbomanage.gwt.server.servlet.AuthFilter;
 
 import javax.servlet.ServletException;

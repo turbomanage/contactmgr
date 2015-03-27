@@ -16,8 +16,8 @@
 
 package com.example.contactmgr.server.auth;
 
-import com.example.listmaker.app.shared.domain.User;
-import com.example.listmaker.server.exception.DuplicateUserException;
+import com.example.contactmgr.app.shared.domain.User;
+import com.example.contactmgr.server.exception.DuplicateUserException;
 import com.example.contactmgr.server.exception.RestException;
 import com.google.api.client.auth.oauth2.TokenResponseException;
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeTokenRequest;
@@ -125,7 +125,7 @@ public class GPlus extends LoginHelper {
                             accessToken.toString(), GoogleTokenResponse.class));
             // Create a new authorized API client.
             Plus service = new Plus.Builder(TRANSPORT, JSON_FACTORY, credential)
-                    .setApplicationName(APPLICATION_NAME)
+                    .setApplicationName(OAUTH_APP_NAME)
                     .build();
             // Get a list of people that this user has shared with this app.
             Person me = service.people().get("me").execute();
@@ -207,7 +207,7 @@ public class GPlus extends LoginHelper {
                             tokenData, GoogleTokenResponse.class));
             // Create a new authorized API client.
             Plus service = new Plus.Builder(TRANSPORT, JSON_FACTORY, credential)
-                    .setApplicationName(APPLICATION_NAME)
+                    .setApplicationName(OAUTH_APP_NAME)
                     .build();
             // Get a list of people that this user has shared with this app.
             Person me = service.people().get("me").execute();

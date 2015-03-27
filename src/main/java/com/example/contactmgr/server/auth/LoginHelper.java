@@ -1,12 +1,13 @@
 package com.example.contactmgr.server.auth;
 
-import com.example.listmaker.app.shared.domain.User;
-import com.example.listmaker.server.domain.AuthCookie;
-import com.example.listmaker.server.domain.UserSession;
-import com.example.listmaker.server.exception.DuplicateUserException;
-import com.example.listmaker.server.service.common.AppUserService;
+import com.example.contactmgr.app.shared.domain.User;
+import com.example.contactmgr.server.domain.AuthCookie;
+import com.example.contactmgr.server.domain.UserSession;
+import com.example.contactmgr.server.exception.DuplicateUserException;
+import com.example.contactmgr.server.service.common.AppUserService;
 import com.example.contactmgr.server.service.common.AppUserServiceImpl;
 import com.googlecode.objectify.Ref;
+import com.turbomanage.gwt.server.servlet.AuthFilter;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -18,8 +19,8 @@ import java.util.logging.Logger;
 public abstract class LoginHelper {
     private static final Logger log = Logger.getLogger( LoginHelper.class.getName() );
 
-    protected static final String APPLICATION_NAME = "Listmaker";
-    private static final String APP_URL = "/listmaker/index.jsp";
+    protected static final String OAUTH_APP_NAME = "Contact Manager";
+    private static final String APP_URL = "/" + AuthFilter.APP_NAME + "/index.jsp";
     public static final String AUTH_COOKIE_KEY = "authCookie";
     protected static final AppUserService appUserSvc = new AppUserServiceImpl();
 

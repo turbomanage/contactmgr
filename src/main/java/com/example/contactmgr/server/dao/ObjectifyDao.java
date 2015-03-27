@@ -1,6 +1,6 @@
 package com.example.contactmgr.server.dao;
 
-import com.example.listmaker.app.shared.domain.User;
+import com.example.contactmgr.app.shared.domain.User;
 import com.google.appengine.api.datastore.QueryResultIterator;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.NotFoundException;

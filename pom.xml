@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.example</groupId>
-    <artifactId>contacts</artifactId>
+    <artifactId>contactmgr</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>Contacts</name>
+    <name>Contact Manager</name>
     <properties>
         <gwt.version>2.7.0</gwt.version>
         <!-- Default style during dev -->
@@ -30,9 +30,10 @@
     </properties>
     <repositories>
         <repository>
-            <id>sonatype-releases</id>
-            <url>https://oss.sonatype.org/content/repositories/releases</url>
-            <name>Sonatype Releases</name>
+            <id>sencha-gxt-repository</id>
+            <name>Sencha GXT Repository</name>
+            <!-- Commercial (with Support) -->
+            <url>https://maven.sencha.com/repo/gxt-support-commercial-release</url>
         </repository>
     </repositories>
     <dependencies>
@@ -201,6 +202,23 @@
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>1.9.5</version>
+        </dependency>
+
+        <!--GXT-->
+        <dependency>
+            <groupId>com.sencha.gxt</groupId>
+            <artifactId>gxt</artifactId>
+            <version>${gxt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sencha.gxt</groupId>
+            <artifactId>gxt-chart</artifactId>
+            <version>${gxt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sencha.gxt</groupId>
+            <artifactId>gxt-theme-neptune</artifactId>
+            <version>${gxt.version}</version>
         </dependency>
 
         <!-- Selenium -->

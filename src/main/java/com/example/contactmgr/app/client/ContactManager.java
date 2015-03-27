@@ -4,13 +4,13 @@
 
 package com.example.contactmgr.app.client;
 
+import com.example.contactmgr.app.client.mvp.AnimatedActivityManager;
 import com.example.contactmgr.app.client.mvp.AppActivityMapper;
+import com.example.contactmgr.app.client.place.ContactsPlace;
 import com.example.contactmgr.app.client.service.AppCallback;
 import com.example.contactmgr.app.client.service.LoginInfoService;
+import com.example.contactmgr.app.shared.domain.User;
 import com.example.contactmgr.common.client.ui.web.AppStyles;
-import com.example.listmaker.app.client.mvp.AnimatedActivityManager;
-import com.example.listmaker.app.client.place.ContactsPlace;
-import com.example.listmaker.app.shared.domain.User;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
@@ -25,11 +25,10 @@ import com.google.gwt.user.client.ui.SimplePanel;
 import org.fusesource.restygwt.client.Defaults;
 
 /**
- * Listmaker entry point.
+ * GWT entry point
  */
 public class ContactManager implements EntryPoint {
 
-    private static final String LOGOUT_URL = "/listmaker/logout";
     private SimplePanel mainDisplay = new SimplePanel();
     private Place defaultPlace = new ContactsPlace(null);
 

@@ -1,6 +1,5 @@
 package com.example.contactmgr.app.shared.domain;
 
-import com.example.listmaker.app.shared.domain.User;
 import com.googlecode.objectify.Ref;
 
 /**
@@ -8,7 +7,7 @@ import com.googlecode.objectify.Ref;
  */
 public interface Owned {
 
-    public Ref<com.example.listmaker.app.shared.domain.User> getOwnerKey();
+    public Ref<com.example.contactmgr.app.shared.domain.User> getOwnerKey();
 
     public void setOwnerKey(Ref<User> owner);
 

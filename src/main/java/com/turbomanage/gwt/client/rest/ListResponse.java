@@ -1,7 +1,5 @@
 package com.turbomanage.gwt.client.rest;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 /**

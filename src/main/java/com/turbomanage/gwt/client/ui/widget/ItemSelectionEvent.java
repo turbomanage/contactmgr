@@ -1,8 +1,8 @@
 package com.turbomanage.gwt.client.ui.widget;
 
-import java.util.HashSet;
-
 import com.google.gwt.event.shared.GwtEvent;
+
+import java.util.HashSet;
 
 public class ItemSelectionEvent<T> extends GwtEvent<ItemSelectionHandler>
 {

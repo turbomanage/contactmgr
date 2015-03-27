@@ -1,6 +1,6 @@
 package com.turbomanage.gwt.client.ui.widget;
 
-import com.example.contacts.common.client.ui.web.AppStyles;
+import com.example.contactmgr.common.client.ui.web.AppStyles;
 import com.google.gwt.dom.client.DivElement;
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;

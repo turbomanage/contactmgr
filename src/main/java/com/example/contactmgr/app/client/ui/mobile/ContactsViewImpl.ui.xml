@@ -8,7 +8,7 @@
         xmlns:menu="urn:import:com.sencha.gxt.widget.core.client.menu"
         xmlns:chart="urn:import:com.sencha.gxt.chart.client.chart">
 
-    <ui:style>
+    <ui:style gss="true">
         .big div {
             font-size: 3em;
             line-height: 1.1;

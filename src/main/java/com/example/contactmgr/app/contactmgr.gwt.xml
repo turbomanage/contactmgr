@@ -12,12 +12,9 @@
     <!-- the theme of your GWT application by uncommenting          -->
     <!-- any one of the following lines.                            -->
     <inherits name='com.google.gwt.user.theme.standard.Standard' />
-    <stylesheet src="css/app.css"/>
+    <stylesheet src="css/app.gss"/>
 
     <inherits name='com.sencha.gxt.ui.GXT' />
-    <!-- GXT Theme -->
-    <!-- <inherits name='com.sencha.gxt.theme.blue.Blue'/> -->
-    <!-- <inherits name='com.sencha.gxt.theme.gray.Gray' /> -->
     <inherits name="com.sencha.gxt.theme.neptune.Theme" />
 
     <!-- Other module inherits                                      -->
@@ -52,7 +49,7 @@
         <when-type-is class="com.example.contactmgr.app.client.ClientFactory"/>
     </replace-with>
 
-ui    <set-configuration-property name="CssResource.obfuscationPrefix" value="empty"/>
+    <set-configuration-property name="CssResource.obfuscationPrefix" value="empty"/>
 
 	<source path="shared" />
 	<source path="client" />

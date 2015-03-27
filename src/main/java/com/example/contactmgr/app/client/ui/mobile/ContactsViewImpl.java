@@ -12,6 +12,7 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiFactory;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Widget;
 import com.sencha.gxt.core.client.IdentityValueProvider;
@@ -20,7 +21,7 @@ import com.sencha.gxt.widget.core.client.ListView;
 /**
  * Created by david on 2/26/15.
  */
-public class ContactsViewImpl extends ViewImpl<ContactsView.Delegate> implements ContactsView {
+public class ContactsViewImpl extends ViewImpl<ContactsView.Delegate> implements ContactsView, LongPressContactCell.CellEventHandler {
 
     interface OurUiBinder extends UiBinder<Widget, ContactsViewImpl> {
     }
@@ -33,7 +34,7 @@ public class ContactsViewImpl extends ViewImpl<ContactsView.Delegate> implements
 
     @UiFactory
     public ListView<Contact, Contact> makeListView() {
-        final ListView listView = new ListView(App.model().getContactStore(), new IdentityValueProvider<Contact>(), new ContactCell());
+        final ListView listView = new ListView(App.model().getContactStore(), new IdentityValueProvider<Contact>(), new LongPressContactCell(this));
         listView.addDomHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent clickEvent) {
@@ -54,4 +55,16 @@ public class ContactsViewImpl extends ViewImpl<ContactsView.Delegate> implements
     public void onClickNewContact(ClickEvent e) {
         getPresenter().newContact();
     }
+
+    @Override
+    public void onCellTap(Element e) {
+        int i = contactListView.findElementIndex(e);
+        App.placeController().goTo(new ContactDetailPlace(i));
+    }
+
+    @Override
+    public void onCellLongPress(Element e, Contact c) {
+        Window.alert("You selected " + c.getFirstName() + " " + c.getLastName());
+    }
+
 }

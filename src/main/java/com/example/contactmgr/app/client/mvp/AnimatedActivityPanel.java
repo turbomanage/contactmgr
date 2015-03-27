@@ -110,7 +110,7 @@ public class AnimatedActivityPanel extends Composite implements AcceptsOneWidget
 
     interface Bundle extends ClientBundle {
         Bundle INSTANCE = GWT.create(Bundle.class);
-        @Source({"slide.css"})
+        @Source({"slide.gss"})
         CSS css();
     }
 

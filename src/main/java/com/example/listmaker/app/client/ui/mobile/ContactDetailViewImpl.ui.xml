@@ -1,0 +1,61 @@
+<ui:UiBinder
+        xmlns:ui='urn:ui:com.google.gwt.uibinder'
+        xmlns:g="urn:import:com.google.gwt.user.client.ui"
+        xmlns:c="urn:import:com.sencha.gxt.widget.core.client.container"
+        xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+        xmlns:form="urn:import:com.sencha.gxt.widget.core.client.form"
+        xmlns:button="urn:import:com.sencha.gxt.widget.core.client.button"
+        xmlns:menu="urn:import:com.sencha.gxt.widget.core.client.menu"
+        xmlns:chart="urn:import:com.sencha.gxt.chart.client.chart" xmlns:client="http://www.w3.org/1999/html">
+
+    <ui:with type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+             field="verticalLayoutData">
+        <ui:attributes width="1" height="-1" />
+    </ui:with>
+
+    <ui:style>
+        .space {
+            padding: 1em;
+        }
+    </ui:style>
+
+    <gxt:FramedPanel borders="false" headerVisible="false" styleName="{style.space}">
+
+        <c:VerticalLayoutContainer>
+
+            <c:child layoutData="{verticalLayoutData}">
+                <form:FieldLabel text="First name" labelSeparator="" />
+            </c:child>
+
+            <c:child layoutData="{verticalLayoutData}">
+                <form:TextField ui:field="firstName" allowBlank="false" emptyText="First name..."/>
+            </c:child>
+
+            <c:child layoutData="{verticalLayoutData}">
+                <form:FieldLabel text="Last name" labelSeparator="" />
+            </c:child>
+
+            <c:child layoutData="{verticalLayoutData}">
+                <form:TextField ui:field="lastName" allowBlank="false" emptyText="Last name..."/>
+            </c:child>
+
+            <c:child layoutData="{verticalLayoutData}">
+                <form:FieldLabel text="Email" labelSeparator="" />
+            </c:child>
+
+            <c:child layoutData="{verticalLayoutData}">
+                <form:TextField ui:field="email" emptyText="Email..."/>
+            </c:child>
+
+        </c:VerticalLayoutContainer>
+
+        <gxt:button>
+            <button:TextButton ui:field="saveButton" text="Save"/>
+        </gxt:button>
+        <gxt:button>
+            <button:TextButton ui:field="cancelButton" text="Cancel"/>
+        </gxt:button>
+
+    </gxt:FramedPanel>
+
+</ui:UiBinder>

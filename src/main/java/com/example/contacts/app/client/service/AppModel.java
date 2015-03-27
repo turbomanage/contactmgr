@@ -1,7 +1,10 @@
-package com.example.contacts.app.client.service;
+package com.example.listmaker.app.client.service;
 
-
-import com.example.contacts.common.domain.User;
+import com.example.listmaker.app.client.domain.ContactProperties;
+import com.example.listmaker.app.shared.domain.Contact;
+import com.example.listmaker.app.shared.domain.User;
+import com.google.gwt.core.client.GWT;
+import com.sencha.gxt.data.shared.ListStore;
 
 /**
  * Singleton that represents the current state of the UI. Getters
@@ -15,6 +18,8 @@ import com.example.contacts.common.domain.User;
 public class AppModel
 {
     private User me;
+    private final ContactProperties contactProperties = GWT.create(ContactProperties.class);
+    private final ListStore<Contact> contactStore = new ListStore<Contact>(contactProperties.id());
 
     public User getMe() {
         return me;
@@ -24,4 +29,7 @@ public class AppModel
         this.me = me;
     }
 
+    public ListStore<Contact> getContactStore() {
+        return contactStore;
+    }
 }

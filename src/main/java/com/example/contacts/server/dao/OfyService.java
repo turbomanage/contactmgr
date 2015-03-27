@@ -1,9 +1,11 @@
-package com.example.contacts.server.dao;
+package com.example.listmaker.server.dao;
 
+import com.example.listmaker.app.shared.domain.Contact;
+import com.example.listmaker.server.domain.UserSession;
+import com.example.listmaker.app.shared.domain.User;
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
 import com.googlecode.objectify.ObjectifyService;
-import com.example.contacts.common.domain.*;
 
 /**
  * Created by david on 7/3/14.
@@ -11,6 +13,7 @@ import com.example.contacts.common.domain.*;
 public class OfyService {
 
     static {
+        ObjectifyService.register(Contact.class);
         ObjectifyService.register(User.class);
         ObjectifyService.register(UserSession.class);
     }

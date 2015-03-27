@@ -1,10 +1,10 @@
-package com.example.contacts.test;
+package com.example.listmaker.test;
 
-import com.example.contacts.common.domain.User;
-import com.example.contacts.server.dao.UserDao;
-import com.example.contacts.server.service.common.AppUserService;
-import com.example.contacts.server.service.common.AppUserServiceFactory;
-import com.example.contacts.test.helper.BaseTest;
+import com.example.listmaker.app.shared.domain.User;
+import com.example.listmaker.server.dao.UserDao;
+import com.example.listmaker.server.service.common.AppUserService;
+import com.example.listmaker.server.service.common.AppUserServiceFactory;
+import com.example.listmaker.test.helper.BaseTest;
 import com.turbomanage.gwt.server.servlet.AuthFilter;
 
 import java.util.List;

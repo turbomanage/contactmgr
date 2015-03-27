@@ -1,10 +1,10 @@
-package com.example.contacts.server.servlet;
+package com.example.listmaker.server.servlet;
 
-import com.example.contacts.common.domain.User;
-import com.example.contacts.common.domain.UserSession;
-import com.example.contacts.server.auth.LoginHelper;
-import com.example.contacts.server.domain.AuthCookie;
-import com.example.contacts.server.service.common.AppUserService;
+import com.example.listmaker.app.shared.domain.User;
+import com.example.listmaker.server.domain.UserSession;
+import com.example.listmaker.server.auth.LoginHelper;
+import com.example.listmaker.server.domain.AuthCookie;
+import com.example.listmaker.server.service.common.AppUserService;
 import com.turbomanage.gwt.server.servlet.AuthFilter;
 
 import javax.servlet.ServletException;
@@ -42,7 +42,6 @@ public class LoginServlet extends HttpServlet {
             AuthCookie newAuthCookie = LoginHelper.makeSessionCookie(newSession);
             resp.addCookie(newAuthCookie.getCookie());
         }
-//        req.getRequestDispatcher(LoginHelper.getAppUrl(req)).forward(req, resp);
         resp.sendRedirect(LoginHelper.getAppUrl(req));
     }
 

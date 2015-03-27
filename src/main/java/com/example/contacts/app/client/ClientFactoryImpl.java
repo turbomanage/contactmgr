@@ -1,30 +1,20 @@
-package com.example.contacts.app.client;
+package com.example.listmaker.app.client;
 
-import com.example.contacts.app.client.api.ContactsView;
-import com.example.contacts.app.client.ui.mobile.ContactsViewImpl;
+import com.example.listmaker.app.client.ui.mobile.ContactDetailView;
+import com.example.listmaker.app.client.ui.mobile.ContactDetailViewImpl;
+import com.example.listmaker.app.client.ui.mobile.ContactsView;
+import com.example.listmaker.app.client.ui.mobile.ContactsViewImpl;
 import com.google.gwt.event.shared.SimpleEventBus;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.web.bindery.event.shared.EventBus;
 
 /**
  * Manages instances of Views.
- * Created by Gene on 6/5/2014.
  */
 public class ClientFactoryImpl implements ClientFactory {
 
-    private static final EventBus eventBus = new SimpleEventBus();
-    private static final PlaceController placeController = new PlaceController(eventBus);
-    private static ContactsView contactsView;
-
-    @Override
-    public EventBus getEventBus() {
-        return eventBus;
-    }
-
-    @Override
-    public PlaceController getPlaceController() {
-        return placeController;
-    }
+    private ContactsView contactsView;
+    private ContactDetailView contactDetailView;
 
     @Override
     public ContactsView getContactsView() {
@@ -33,4 +23,13 @@ public class ClientFactoryImpl implements ClientFactory {
         }
         return contactsView;
     }
+
+    @Override
+    public ContactDetailView getContactDetailView() {
+        if (contactDetailView == null) {
+            contactDetailView = new ContactDetailViewImpl();
+        }
+        return contactDetailView;
+    }
+
 }

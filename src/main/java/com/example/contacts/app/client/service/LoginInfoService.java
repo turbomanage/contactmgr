@@ -1,6 +1,6 @@
-package com.example.contacts.app.client.service;
+package com.example.listmaker.app.client.service;
 
-import com.example.contacts.common.domain.User;
+import com.example.listmaker.app.shared.domain.User;
 import org.fusesource.restygwt.client.MethodCallback;
 import org.fusesource.restygwt.client.RestService;
 

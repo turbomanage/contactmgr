@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.contacts.server.auth;
+package com.example.listmaker.server.auth;
 
 import com.google.api.client.auth.oauth2.TokenResponseException;
 import com.google.api.client.googleapis.auth.oauth2.*;
@@ -23,9 +23,9 @@ import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.jackson.JacksonFactory;
 import com.google.api.services.plus.Plus;
 import com.google.api.services.plus.model.Person;
-import com.example.contacts.common.domain.User;
-import com.example.contacts.server.exception.DuplicateUserException;
-import com.example.contacts.server.exception.RestException;
+import com.example.listmaker.app.shared.domain.User;
+import com.example.listmaker.server.exception.DuplicateUserException;
+import com.example.listmaker.server.exception.RestException;
 import com.turbomanage.gwt.server.servlet.AuthFilter;
 
 import javax.servlet.http.HttpServletRequest;

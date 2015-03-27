@@ -1,11 +1,11 @@
-package com.example.contacts.server.servlet;
+package com.example.listmaker.server.servlet;
 
 import ca.defuse.PasswordHash;
-import com.example.contacts.common.domain.User;
-import com.example.contacts.server.auth.LoginHelper;
-import com.example.contacts.server.exception.DuplicateUserException;
-import com.example.contacts.server.service.common.AppUserService;
-import com.example.contacts.server.service.common.AppUserServiceFactory;
+import com.example.listmaker.app.shared.domain.User;
+import com.example.listmaker.server.auth.LoginHelper;
+import com.example.listmaker.server.exception.DuplicateUserException;
+import com.example.listmaker.server.service.common.AppUserService;
+import com.example.listmaker.server.service.common.AppUserServiceFactory;
 import com.turbomanage.gwt.server.servlet.AuthFilter;
 
 import javax.servlet.ServletException;

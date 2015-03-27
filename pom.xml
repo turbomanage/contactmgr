@@ -95,6 +95,12 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-codeserver</artifactId>
+            <version>${gwt.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>net.sf.jsr107cache</groupId>
             <artifactId>jsr107cache</artifactId>
             <version>1.1</version>
@@ -120,21 +126,6 @@
             <groupId>com.googlecode.objectify</groupId>
             <artifactId>objectify-gwt</artifactId>
             <version>1.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.inject</groupId>
-            <artifactId>guice</artifactId>
-            <version>3.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.inject.extensions</groupId>
-            <artifactId>guice-servlet</artifactId>
-            <version>3.0</version>
-        </dependency>
-        <dependency>
-            <groupId>aopalliance</groupId>
-            <artifactId>aopalliance</artifactId>
-            <version>1.0</version>
         </dependency>
         <dependency>
             <groupId>com.googlecode.gwtquery</groupId>

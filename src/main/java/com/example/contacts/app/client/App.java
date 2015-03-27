@@ -1,6 +1,8 @@
 package com.example.contacts.app.client;
 
 import com.google.gwt.core.shared.GWT;
+import com.google.gwt.event.shared.SimpleEventBus;
+import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.place.shared.PlaceHistoryMapper;
 import com.google.web.bindery.event.shared.EventBus;
 import com.example.contacts.app.client.mvp.AppPlaceHistoryMapper;
@@ -13,22 +15,23 @@ import java.util.logging.Logger;
 
 /**
  * Use this to get images, constants, model, and messages
- * Created by Gene on 6/5/2014.
  */
 public class App {
 
-    private static AppModel appModel;
-    private static AppConstants appConstants;
-    private static AppMessages appMessages;
-    private static AppImages appImages;
+    private static final AppConstants appConstants = GWT.create(AppConstants.class);
+    private static final AppMessages appMessages = GWT.create(AppMessages.class);
+    private static final AppImages appImages = GWT.create(AppImages.class);
+    private static final AppModel appModel = new AppModel();
 
-    private static ClientFactory clientFactory;
-    private static DispatcherFactory dispatcherFactory = new DispatcherFactory();
+    private static final ClientFactory clientFactory = new ClientFactoryImpl();
+    private static final ServiceFactory serviceFactory = new ServiceFactoryImpl();
+    private static final DispatcherFactory dispatcherFactory = new DispatcherFactory();
 
-    private static PlaceHistoryMapper placeHistoryMapper;
+    private static final EventBus eventBus = new SimpleEventBus();
+    private static final PlaceController placeController = new PlaceController(eventBus);
+    private static final PlaceHistoryMapper placeHistoryMapper = GWT.create(AppPlaceHistoryMapper.class);
 
     private static final Logger rootLogger = Logger.getLogger("");
-
 
     private App() {
         // prevent instantiation
@@ -38,49 +41,39 @@ public class App {
         return rootLogger;
     }
 
-    public static PlaceHistoryMapper getPlaceHistoryMapper() {
-        if (placeHistoryMapper == null) {
-            placeHistoryMapper = GWT.create(AppPlaceHistoryMapper.class);
-        }
+    public static PlaceHistoryMapper historyMapper() {
         return placeHistoryMapper;
     }
 
-    public static EventBus getEventBus() {
-        return getClientFactory().getEventBus();
+    public static EventBus eventBus() {
+        return eventBus;
     }
 
-    public static ClientFactory getClientFactory() {
-        if (clientFactory == null) {
-            clientFactory = new ClientFactoryImpl();
-        }
+    public static PlaceController placeController() {
+        return placeController;
+    }
+
+    public static ClientFactory clientFactory() {
         return clientFactory;
     }
 
-    public static AppModel getAppModel() {
-        if (appModel == null) {
-            appModel = new AppModel();
-        }
+    public static ServiceFactory serviceFactory() {
+        return serviceFactory;
+    }
+
+    public static AppModel model() {
         return appModel;
     }
 
-    public static AppConstants getAppConstants() {
-        if (appConstants == null) {
-            appConstants = GWT.create(AppConstants.class);
-        }
+    public static AppConstants constants() {
         return appConstants;
     }
 
-    public static AppMessages getAppMessages() {
-        if (appMessages == null) {
-            appMessages = GWT.create(AppMessages.class);
-        }
+    public static AppMessages messages() {
         return appMessages;
     }
 
-    public static AppImages getAppImages() {
-        if (appImages == null) {
-            appImages = GWT.create(AppImages.class);
-        }
+    public static AppImages images() {
         return appImages;
     }
 

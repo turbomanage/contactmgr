@@ -1,12 +1,12 @@
-package com.example.contacts.server.service.common;
+package com.example.listmaker.server.service.common;
 
 import ca.defuse.PasswordHash;
-import com.example.contacts.common.domain.User;
-import com.example.contacts.common.domain.UserSession;
-import com.example.contacts.server.dao.UserDao;
-import com.example.contacts.server.dao.UserSessionDao;
-import com.example.contacts.server.domain.AuthCookie;
-import com.example.contacts.server.exception.DuplicateUserException;
+import com.example.listmaker.app.shared.domain.User;
+import com.example.listmaker.server.domain.UserSession;
+import com.example.listmaker.server.dao.UserDao;
+import com.example.listmaker.server.dao.UserSessionDao;
+import com.example.listmaker.server.domain.AuthCookie;
+import com.example.listmaker.server.exception.DuplicateUserException;
 import com.googlecode.objectify.Ref;
 import com.turbomanage.gwt.exception.TooManyResultsException;
 

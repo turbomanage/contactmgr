@@ -1,6 +1,6 @@
-package com.example.contacts.server.dao;
+package com.example.listmaker.server.dao;
 
-import com.example.contacts.common.domain.UserSession;
+import com.example.listmaker.server.domain.UserSession;
 import com.google.appengine.api.datastore.QueryResultIterator;
 
 /**

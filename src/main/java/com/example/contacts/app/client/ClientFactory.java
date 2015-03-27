@@ -1,6 +1,7 @@
-package com.example.contacts.app.client;
+package com.example.listmaker.app.client;
 
-import com.example.contacts.app.client.api.ContactsView;
+import com.example.listmaker.app.client.ui.mobile.ContactDetailView;
+import com.example.listmaker.app.client.ui.mobile.ContactsView;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.web.bindery.event.shared.EventBus;
 
@@ -9,8 +10,7 @@ import com.google.web.bindery.event.shared.EventBus;
  */
 public interface ClientFactory {
 
-    EventBus getEventBus();
-    PlaceController getPlaceController();
-
     ContactsView getContactsView();
+    ContactDetailView getContactDetailView();
+
 }

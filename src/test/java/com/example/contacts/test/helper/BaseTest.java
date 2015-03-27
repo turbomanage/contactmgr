@@ -1,12 +1,11 @@
-package com.example.contacts.test.helper;
+package com.example.listmaker.test.helper;
 
-import com.example.contacts.test.UserTestCase;
+import com.example.listmaker.test.UserTestCase;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalMemcacheServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import com.google.appengine.tools.development.testing.LocalTaskQueueTestConfig;
-import com.google.inject.Injector;
-import com.example.contacts.common.domain.User;
+import com.example.listmaker.app.shared.domain.User;
 import com.turbomanage.gwt.server.servlet.AuthFilter;
 import junit.framework.TestCase;
 import org.mockito.Mockito;
@@ -21,7 +20,6 @@ import java.util.HashMap;
  */
 public abstract class BaseTest extends TestCase {
 
-    private static Injector inj;
     protected LocalServiceTestHelper helper;
     private LocalDatastoreServiceTestConfig datastoreConfig;
     private LocalMemcacheServiceTestConfig memcacheConfig;

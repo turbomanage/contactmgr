@@ -1,10 +1,8 @@
 package com.example.contactmgr.app.client.service;
 
-import com.example.contactmgr.app.client.domain.ContactProperties;
 import com.example.contactmgr.app.shared.domain.Contact;
 import com.example.contactmgr.app.shared.domain.User;
-import com.google.gwt.core.client.GWT;
-import com.sencha.gxt.data.shared.ListStore;
+import com.google.gwt.view.client.ListDataProvider;
 
 /**
  * Singleton that represents the current state of the UI. Getters
@@ -17,9 +15,10 @@ import com.sencha.gxt.data.shared.ListStore;
  */
 public class AppModel
 {
+
+    private final ListDataProvider<Contact> contactStore = new ListDataProvider<Contact>();
+
     private User me;
-    private final ContactProperties contactProperties = GWT.create(ContactProperties.class);
-    private final ListStore<Contact> contactStore = new ListStore<Contact>(contactProperties.id());
 
     public User getMe() {
         return me;
@@ -29,7 +28,8 @@ public class AppModel
         this.me = me;
     }
 
-    public ListStore<Contact> getContactStore() {
+    public ListDataProvider<Contact> getContactStore() {
         return contactStore;
     }
+
 }

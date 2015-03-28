@@ -30,7 +30,7 @@ public class ContactDetailActivity extends ActivityPresenter<ContactDetailView> 
             // new place
             getView().setContact(new Contact());
         } else {
-            getView().setContact(App.model().getContactStore().get(contactIndex));
+            getView().setContact(App.model().getContactStore().getList().get(contactIndex));
         }
     }
 

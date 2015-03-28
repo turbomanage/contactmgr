@@ -29,12 +29,11 @@ public class ContactsActivity extends ActivityPresenter<ContactsView> implements
         svc.listAll(new AppCallback<ListResponse<Contact>>() {
             @Override
             public void handleSuccess(ListResponse<Contact> result) {
-                App.model().getContactStore().replaceAll(result.list);
+                App.model().getContactStore().setList(result.list);
             }
         });
         // add event handlers
     }
-
     @Override
     public void newContact() {
         App.placeController().goTo(new ContactDetailPlace(-1));

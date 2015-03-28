@@ -14,12 +14,6 @@
     <inherits name='com.google.gwt.user.theme.standard.Standard' />
     <stylesheet src="css/app.css"/>
 
-    <inherits name='com.sencha.gxt.ui.GXT' />
-    <!-- GXT Theme -->
-    <!-- <inherits name='com.sencha.gxt.theme.blue.Blue'/> -->
-    <!-- <inherits name='com.sencha.gxt.theme.gray.Gray' /> -->
-    <inherits name="com.sencha.gxt.theme.neptune.Theme" />
-
     <!-- Other module inherits                                      -->
     <inherits name="com.google.gwt.i18n.I18N"/>
     <inherits name="com.turbomanage.gwt.Util" />

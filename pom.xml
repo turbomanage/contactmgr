@@ -11,7 +11,6 @@
         <gwt.version>2.7.0</gwt.version>
         <!-- Default style during dev -->
         <gwt.style>PRETTY</gwt.style>
-        <gxt.version>3.1.2</gxt.version>
         <appengine.target.version>1.9.5</appengine.target.version>
         <gae.home>
             ${user.home}/.m2/repository/com/google/appengine/appengine-java-sdk/${appengine.target.version}/appengine-java-sdk/appengine-java-sdk-${appengine.target.version}
@@ -28,14 +27,6 @@
         <gwt.compiler.strict>true</gwt.compiler.strict>
         <gwt.test.testTimeOut>480</gwt.test.testTimeOut>
     </properties>
-    <repositories>
-        <repository>
-            <id>sencha-gxt-repository</id>
-            <name>Sencha GXT Repository</name>
-            <!-- Commercial (with Support) -->
-            <url>https://maven.sencha.com/repo/gxt-support-commercial-release</url>
-        </repository>
-    </repositories>
     <dependencies>
         <!-- General dependencies for standard applications -->
         <dependency>
@@ -202,23 +193,6 @@
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>1.9.5</version>
-        </dependency>
-
-        <!--GXT-->
-        <dependency>
-            <groupId>com.sencha.gxt</groupId>
-            <artifactId>gxt</artifactId>
-            <version>${gxt.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sencha.gxt</groupId>
-            <artifactId>gxt-chart</artifactId>
-            <version>${gxt.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sencha.gxt</groupId>
-            <artifactId>gxt-theme-neptune</artifactId>
-            <version>${gxt.version}</version>
         </dependency>
 
         <!-- Selenium -->

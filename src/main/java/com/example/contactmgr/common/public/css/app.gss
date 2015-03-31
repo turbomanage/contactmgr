@@ -1,0 +1,83 @@
+/* put GWT styles here */
+/* eric meyer's reset reloaded, minus table elements */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend
+	/*, table, caption, tbody, tfoot, thead, tr, th, td */ {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	/*font-size: normal;*/
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+a {
+    color: #c0c0c0;
+}
+
+form div {
+    display: block;
+    margin-top: 1em;
+    vertical-align: bottom;
+}
+
+input[type="text"],input[type="password"] {
+    height: 1.2rem;
+    width: 100%;
+    border: 0;
+    background-color: white;
+    border-radius: 7px;
+}
+
+input[type="checkbox"] {
+    height: 1.5rem;
+    width: 1.5rem;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+input[type="submit"],input[type="reset"] {
+    float: right;
+    padding: 0.3rem;
+    margin-top: -0.6rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 0;
+    border-radius: 7px;
+    background-color: #e8eaf6;
+    color: #004d40;
+}
+
+div label {
+    display: block;
+}
+
+#wrap {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #004d40;
+}
+
+#main {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#loading { /* make visible */
+    display: block;
+    /*set the div in the center of the screen*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    margin-left: -64px;
+}

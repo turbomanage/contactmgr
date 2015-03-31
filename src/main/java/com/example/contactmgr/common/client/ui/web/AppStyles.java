@@ -8,7 +8,7 @@ import com.google.gwt.resources.client.ClientBundle;
  * @author David Chandler
  */
 public interface AppStyles extends ClientBundle {
-  static final String BODY_PANEL_CONTENT_ID = "main";
+  static final String BODY_PANEL_CONTENT_ID = "app";
   static final String MESSAGE_PANEL_ID = "contacts-message-panel";
   static final String ID_SPLASH = "loading";
   static final String FORM_LABEL = "contacts-formLabel";

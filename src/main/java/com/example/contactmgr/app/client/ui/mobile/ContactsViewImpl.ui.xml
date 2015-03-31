@@ -5,12 +5,12 @@
 
     <ui:style>
         .big div {
-            font-size: 3em;
+            font-size: 2em;
             line-height: 1.1;
         }
         button.menu {
             float: right;
-            font-size: 3em;
+            font-size: 2em;
             text-align: right;
         }
     </ui:style>

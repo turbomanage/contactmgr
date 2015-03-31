@@ -6,7 +6,7 @@
 
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <!-- Consider inlining CSS to reduce the number of requested files -->
-<link type="text/css" rel="stylesheet" href="/css/site.css">
+<%--<link type="text/css" rel="stylesheet" href="/css/site.css">--%>
 
 <title>Contacts</title>
 
@@ -25,7 +25,7 @@
 <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
 	style="position: absolute; width: 0; height: 0; border: 0"></iframe>
 
-<div id="main"></div>
+<div id="app"></div>
 
 <div id="loading">Loading...<BR />
 	<img src="/images/splash.gif" alt="loading...">

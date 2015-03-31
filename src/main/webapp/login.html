@@ -1,50 +1,42 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+        "http://www.w3.org/TR/html4/loose.dtd">
 
 <head lang="en">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 
     <!-- Consider inlining CSS to reduce the number of requested files -->
-    <link type="text/css" rel="stylesheet" href="/css/site.css">
-
-    <title></title>
+    <link type="text/css" rel="stylesheet" href="css/site.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,400italic' rel='stylesheet' type='text/css'>
+    <title>Login</title>
 </head>
 <title>Contacts</title>
 
 <body onload="document.getElementById('email').focus();">
 
 <div id="wrap">
-    <div id="header">
-
-    </div> <!-- header -->
-
-    <div id="signup">
+    <div id="main">
         <form action="/contactmgr/login" method="post">
-            <fieldset>
-                <legend>Sign in</legend>
-                <div>
-                    <label for="email">Email</label><br/>
-                    <input name="email" id="email" type="text" tabindex="1"></input>
-                </div>
-                <div>
-                    <label for="password">Password</label><br/>
-                    <input name="password" id="password" type="password" tabindex="2"></input>
-                </div>
-                <div>
-                    <label for="remember">Remember me</label><br/>
-                    <input name="remember" id="remember" type="checkbox" tabindex="3"></input>
-                </div>
-                <div>
-                    <br/>
-                    <input type="submit" class="btn" name="go" value="Login" tabindex="4"/>
-                </div>
-                <div>
-                    Not a user? <a href="signup.html">Create a new account</a>
-                </div>
-            </fieldset>
+            <div>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" tabindex="1" placeholder=" Email"/>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" tabindex="2" placeholder=" Password" />
+            </div>
+            <div>
+                <label for="remember" style="display: inline">Remember me&nbsp;</label>
+                <input name="remember" id="remember" type="checkbox" checked="checked" tabindex="3" />
+            </div>
+            <div>
+                <input type="submit" name="go" id="go" value="Login" tabindex="4" />
+                <label for="go"><a href="signup.html">Sign up</a></label>
+            </div>
         </form>
     </div>
 
-</div> <!-- wrap -->
+</div>
+<!-- wrap -->
 </body>
 </html>

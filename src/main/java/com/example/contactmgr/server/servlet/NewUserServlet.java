@@ -1,7 +1,7 @@
 package com.example.contactmgr.server.servlet;
 
 import ca.defuse.PasswordHash;
-import com.example.contactmgr.app.shared.domain.User;
+import com.example.contactmgr.shared.domain.User;
 import com.example.contactmgr.server.auth.LoginHelper;
 import com.example.contactmgr.server.exception.DuplicateUserException;
 import com.example.contactmgr.server.service.common.AppUserService;

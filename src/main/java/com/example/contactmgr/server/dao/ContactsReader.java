@@ -1,6 +1,6 @@
 package com.example.contactmgr.server.dao;
 
-import com.example.contactmgr.common.domain.Contact;
+import com.example.contactmgr.server.domain.Contact;
 
 import javax.servlet.ServletContext;
 import javax.ws.rs.WebApplicationException;

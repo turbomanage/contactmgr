@@ -1,7 +1,7 @@
 package com.example.contactmgr.server.service.common;
 
 import ca.defuse.PasswordHash;
-import com.example.contactmgr.app.shared.domain.User;
+import com.example.contactmgr.shared.domain.User;
 import com.example.contactmgr.server.dao.UserDao;
 import com.example.contactmgr.server.dao.UserSessionDao;
 import com.example.contactmgr.server.domain.AuthCookie;

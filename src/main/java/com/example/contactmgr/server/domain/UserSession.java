@@ -1,7 +1,7 @@
 package com.example.contactmgr.server.domain;
 
-import com.example.contactmgr.app.shared.domain.Owned;
-import com.example.contactmgr.app.shared.domain.User;
+import com.example.contactmgr.shared.domain.Owned;
+import com.example.contactmgr.shared.domain.User;
 import com.googlecode.objectify.Ref;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;

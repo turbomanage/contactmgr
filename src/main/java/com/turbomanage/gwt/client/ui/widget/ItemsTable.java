@@ -1,6 +1,6 @@
 package com.turbomanage.gwt.client.ui.widget;
 
-import com.example.contactmgr.common.client.ui.web.AppStyles;
+import com.example.contactmgr.client.i18n.AppResources;
 import com.google.gwt.dom.client.DivElement;
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
@@ -21,6 +21,10 @@ import java.util.Map.Entry;
 
 public class ItemsTable<T> extends Composite implements HasSelectableItems<T>
 {
+    // TODO make proper resources
+    public static final String HEADER_CLASS = "header";
+    public static final String ITEM_SELECTED_CLASS = "itemSelected";
+
 	public static class FieldDescriptor<T>
 	{
 		public interface FieldAccessor<T>
@@ -220,7 +224,7 @@ public class ItemsTable<T> extends Composite implements HasSelectableItems<T>
 	private void initHeader()
 	{
 		headerRow = Document.get().createDivElement();
-		headerRow.addClassName(AppStyles.HEADER_ROW);
+		headerRow.addClassName(HEADER_CLASS);
 		for (FieldDescriptor<T> fd : itemDescriptor.fields)
 		{
 			DivElement headerCell = Document.get().createDivElement();
@@ -235,14 +239,14 @@ public class ItemsTable<T> extends Composite implements HasSelectableItems<T>
 		selectedItems.clear();
 		for (DivElement div : itemDivs)
 		{
-			div.removeClassName(AppStyles.SELECTED);
+			div.removeClassName(ITEM_SELECTED_CLASS);
 		}
 	}
 
 	protected void selectItem(int itemIndex)
 	{
 		selectedItems.add(showingItems.get(itemIndex));
-		itemDivs[itemIndex].addClassName(AppStyles.SELECTED);
+		itemDivs[itemIndex].addClassName(ITEM_SELECTED_CLASS);
 	}
 
 	@Override

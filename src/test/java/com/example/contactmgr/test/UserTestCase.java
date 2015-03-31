@@ -1,6 +1,6 @@
 package com.example.contactmgr.test;
 
-import com.example.contactmgr.app.shared.domain.User;
+import com.example.contactmgr.shared.domain.User;
 import com.example.contactmgr.server.dao.UserDao;
 import com.example.contactmgr.server.service.common.AppUserService;
 import com.example.contactmgr.server.service.common.AppUserServiceFactory;

@@ -1,6 +1,6 @@
 package com.example.contactmgr.server.dao;
 
-import com.example.contactmgr.app.shared.domain.User;
+import com.example.contactmgr.shared.domain.User;
 import com.googlecode.objectify.Key;
 import com.turbomanage.gwt.server.servlet.AuthFilter;
 

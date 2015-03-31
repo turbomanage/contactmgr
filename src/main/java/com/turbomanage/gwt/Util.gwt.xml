@@ -5,7 +5,11 @@
 	<!-- Inherit the core Web Toolkit stuff.                        -->
 	<inherits name='com.google.gwt.user.User' />
     <inherits name="org.fusesource.restygwt.RestyGWT"/>
-    <inherits name="com.example.contactmgr.common.common"/>
+    <inherits name="com.google.gwt.place.Place" />
+    <inherits name="com.google.gwt.activity.Activity" />
+    <inherits name="com.googlecode.mgwt.ui.Animation" />
+
+    <set-configuration-property name="CssResource.enableGss" value="true" />
 
     <source path="client" />
 	<source path="shared" />

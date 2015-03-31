@@ -1,6 +1,6 @@
 package com.example.contactmgr.server.service.common;
 
-import com.example.contactmgr.app.shared.domain.User;
+import com.example.contactmgr.shared.domain.User;
 import com.example.contactmgr.server.domain.AuthCookie;
 import com.example.contactmgr.server.domain.UserSession;
 import com.example.contactmgr.server.exception.DuplicateUserException;

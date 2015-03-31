@@ -2,8 +2,31 @@
         xmlns:ui='urn:ui:com.google.gwt.uibinder'
         xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
-    <g:FlowPanel>
+    <ui:style>
+        .container {
+            padding: 10px;
+            background-color: #ddd;
+        }
 
+    </ui:style>
+
+    <g:FlowPanel styleName="{style.container}">
+        <g:VerticalPanel>
+            <g:HorizontalPanel>
+                <g:Label>First name</g:Label>
+                <g:TextBox ui:field="firstName"></g:TextBox>
+            </g:HorizontalPanel>
+           <g:HorizontalPanel>
+               <g:Label>Last name</g:Label>
+               <g:TextBox ui:field="lastName"></g:TextBox>
+           </g:HorizontalPanel>
+            <g:HorizontalPanel>
+                <g:Label>Email</g:Label>
+                <g:TextBox ui:field="email"></g:TextBox>
+            </g:HorizontalPanel>
+        </g:VerticalPanel>
+        <g:Button ui:field="saveButton">Save</g:Button>
+        <g:Button ui:field="cancelButton">Cancel</g:Button>
     </g:FlowPanel>
 
 </ui:UiBinder>

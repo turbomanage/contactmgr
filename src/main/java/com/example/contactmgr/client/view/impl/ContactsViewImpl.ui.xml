@@ -14,7 +14,7 @@
         .list div {
             color: white;
             background-image: none;
-            background-color: lightslategray;
+            background-color: #004d40;
             font-size: 2em;
             padding: 0.3rem 0 0.1rem 0.3rem;
             line-height: 1.1;

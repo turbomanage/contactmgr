@@ -290,37 +290,13 @@
                 <artifactId>gwt-maven-plugin</artifactId>
                 <version>${gwt.version}</version>
                 <configuration>
-                    <appEngineVersion>${appengine.target.version}</appEngineVersion>
-                    <appEngineHome>${gae.home}</appEngineHome>
                     <logLevel>INFO</logLevel>
                     <style>${gwt.style}</style>
-                    <compileReport>true</compileReport>
+                    <!--<compileReport>true</compileReport>-->
                     <runTarget>/index.html</runTarget>
-                    <hostedWebapp>${project.build.directory}/${project.build.finalName}</hostedWebapp>
-                    <server>com.google.appengine.tools.development.gwt.AppEngineLauncher</server>
-                    <copyWebapp>true</copyWebapp>
+                    <launcherDir>${project.build.directory}/${project.build.finalName}</launcherDir>
                     <extraJvmArgs>-Xmx1g -Xms64M</extraJvmArgs>
                 </configuration>
-                <executions>
-                    <execution>
-                        <id>gwtcompile</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                    <!--<execution>-->
-                        <!--<phase>test</phase>-->
-                        <!--<goals>-->
-                            <!--<goal>test</goal>-->
-                        <!--</goals>-->
-                        <!--<configuration>-->
-                            <!--<includes>**/*TestSuite.java</includes>-->
-                            <!--<excludes>**/GwtTestCompile.java</excludes>-->
-                            <!--<testTimeOut>${gwt.test.testTimeOut}</testTimeOut>-->
-                        <!--</configuration>-->
-                    <!--</execution>-->
-                </executions>
             </plugin>
 
             <!--

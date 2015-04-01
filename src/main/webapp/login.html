@@ -14,8 +14,8 @@
 
 <body onload="document.getElementById('email').focus();">
 
-<div id="wrap">
-    <div id="main">
+<div class="wrap">
+    <div class="centered">
         <form action="/contactmgr/login" method="post">
             <div>
                 <label for="email">Email</label>
@@ -26,8 +26,8 @@
                 <input type="password" name="password" id="password" tabindex="2" placeholder=" Password" />
             </div>
             <div>
-                <label for="remember" style="display: inline">Remember me&nbsp;</label>
                 <input name="remember" id="remember" type="checkbox" checked="checked" tabindex="3" />
+                <label for="remember" style="display: inline">Remember me&nbsp;</label>
             </div>
             <div>
                 <input type="submit" name="go" id="go" value="Login" tabindex="4" />

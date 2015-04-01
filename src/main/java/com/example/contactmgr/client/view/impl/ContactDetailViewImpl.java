@@ -31,8 +31,6 @@ public class ContactDetailViewImpl extends ViewImpl<ContactDetailView.Delegate> 
     @UiField
     public TextField lastName;
     @UiField
-    public TextField email;
-    @UiField
     public TextButton saveButton;
     @UiField
     public TextButton cancelButton;

@@ -128,11 +128,6 @@
             <artifactId>objectify-gwt</artifactId>
             <version>1.2.1</version>
         </dependency>
-        <dependency>
-            <groupId>com.googlecode.gwtquery</groupId>
-            <artifactId>gwtquery</artifactId>
-            <version>1.4.3</version>
-        </dependency>
 
         <dependency>
             <groupId>httpunit</groupId>

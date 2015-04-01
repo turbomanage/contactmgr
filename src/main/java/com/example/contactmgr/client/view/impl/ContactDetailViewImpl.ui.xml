@@ -6,20 +6,23 @@
         xmlns:form="urn:import:com.sencha.gxt.widget.core.client.form"
         xmlns:button="urn:import:com.sencha.gxt.widget.core.client.button"
         xmlns:menu="urn:import:com.sencha.gxt.widget.core.client.menu"
-        xmlns:chart="urn:import:com.sencha.gxt.chart.client.chart" xmlns:client="http://www.w3.org/1999/html">
+        xmlns:chart="urn:import:com.sencha.gxt.chart.client.chart"
+        xmlns:client="http://www.w3.org/1999/html">
 
     <ui:with type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
              field="verticalLayoutData">
         <ui:attributes width="1" height="-1" />
     </ui:with>
 
-    <ui:style gss="true">
+    <ui:style src="../../i18n/app.gss"/>
+
+    <ui:style field="view" gss="true">
         .space {
             padding: 1em;
         }
     </ui:style>
 
-    <gxt:FramedPanel borders="false" headerVisible="false" styleName="{style.space}">
+    <gxt:FramedPanel borders="false" headerVisible="false" styleName="{view.space}">
 
         <c:VerticalLayoutContainer>
 
@@ -37,14 +40,6 @@
 
             <c:child layoutData="{verticalLayoutData}">
                 <form:TextField ui:field="lastName" allowBlank="false" emptyText="Last name..."/>
-            </c:child>
-
-            <c:child layoutData="{verticalLayoutData}">
-                <form:FieldLabel text="Email" labelSeparator="" />
-            </c:child>
-
-            <c:child layoutData="{verticalLayoutData}">
-                <form:TextField ui:field="email" emptyText="Email..."/>
             </c:child>
 
         </c:VerticalLayoutContainer>

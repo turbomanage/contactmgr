@@ -292,7 +292,6 @@
                 <configuration>
                     <logLevel>INFO</logLevel>
                     <style>${gwt.style}</style>
-                    <!--<compileReport>true</compileReport>-->
                     <runTarget>/index.html</runTarget>
                     <launcherDir>${project.build.directory}/${project.build.finalName}</launcherDir>
                     <extraJvmArgs>-Xmx1g -Xms64M</extraJvmArgs>
@@ -382,6 +381,28 @@
                             </execution>
                         </executions>
                     </plugin>
+
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>gwt-maven-plugin</artifactId>
+                        <version>${gwt.version}</version>
+                        <configuration>
+                            <logLevel>INFO</logLevel>
+                            <style>OBF</style>
+                            <compileReport>true</compileReport>
+                            <extraJvmArgs>-Xmx1g -Xms64M</extraJvmArgs>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>gwtcompile</id>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>compile</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+
                 </plugins>
             </build>
             <properties>

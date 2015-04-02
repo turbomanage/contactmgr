@@ -1,10 +1,11 @@
-package com.example.contactmgr.app.client.ui.mobile;
+package com.example.contactmgr.client.view.impl;
 
-import com.example.contactmgr.app.shared.domain.Contact;
-import com.example.contactmgr.common.client.ui.web.ViewImpl;
+import com.example.contactmgr.client.view.ContactDetailView;
+import com.example.contactmgr.shared.domain.Contact;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Widget;
+import com.turbomanage.gwt.client.ViewImpl;
 
 /**
  * Created by david on 3/10/15.

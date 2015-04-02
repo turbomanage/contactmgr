@@ -31,6 +31,7 @@
         <when-type-is class="com.example.contactmgr.client.ioc.ClientFactory"/>
     </replace-with>
 
+    <set-configuration-property name="CssResource.legacy" value="true" />
     <set-configuration-property name="CssResource.obfuscationPrefix" value="empty"/>
 
 	<source path="shared" />

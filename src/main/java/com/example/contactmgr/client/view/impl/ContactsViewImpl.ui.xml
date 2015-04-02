@@ -1,56 +1,25 @@
 <ui:UiBinder
         xmlns:ui='urn:ui:com.google.gwt.uibinder'
         xmlns:g="urn:import:com.google.gwt.user.client.ui"
-        xmlns:c="urn:import:com.sencha.gxt.widget.core.client.container"
-        xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
-        xmlns:form="urn:import:com.sencha.gxt.widget.core.client.form"
-        xmlns:button="urn:import:com.sencha.gxt.widget.core.client.button"
-        xmlns:menu="urn:import:com.sencha.gxt.widget.core.client.menu"
-        xmlns:chart="urn:import:com.sencha.gxt.chart.client.chart">
+        xmlns:c="urn:import:com.google.gwt.user.cellview.client">
 
-    <ui:style src="../../i18n/app.gss"/>
-
-    <ui:style field="view" gss="true" >
-        .list div {
-            color: white;
-            background-image: none;
-            background-color: #004d40;
+    <ui:style gss="true">
+        .big div {
             font-size: 2em;
-            padding: 0.3rem 0 0.1rem 0.3rem;
             line-height: 1.1;
-            border-bottom: solid thick white;
-            margin: 0 0 0 0;
         }
-
-        .list div:last-child {
-            /* hide ListView common styles box inserted by GXT */
-            border: none;
-            background-color: transparent;
-        }
-
-        div.material {
+        button.menu {
+            float: right;
+            font-size: 2em;
             text-align: right;
-        }
-
-        button.material {
-            background-color: #004d40;
-            color: white;
-            height: 3rem;
-            width: 3rem;
-            padding: 0 0 1rem 0;
-            border-radius: 3rem;
-            border-style: none;
-            margin: 1rem;
-            font-size: 2.1rem;
-            text-align: center;
         }
     </ui:style>
 
     <g:FlowPanel>
-        <g:FlowPanel styleName="{view.material}">
-            <g:Button styleName="{view.material}" ui:field="newButton">+</g:Button>
+        <g:FlowPanel>
+            <g:Button styleName="{style.menu}" ui:field="newButton">+</g:Button>
         </g:FlowPanel>
-        <gxt:ListView ui:field="contactListView" styleName="{view.list}" />
+        <c:CellTable ui:field="contactCellTable" styleName="{style.big}" />
     </g:FlowPanel>
 
 </ui:UiBinder>

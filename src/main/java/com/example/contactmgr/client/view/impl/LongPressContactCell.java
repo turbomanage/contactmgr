@@ -1,6 +1,6 @@
-package com.example.contactmgr.app.client.ui.mobile;
+package com.example.contactmgr.client.view.impl;
 
-import com.example.contactmgr.app.shared.domain.Contact;
+import com.example.contactmgr.shared.domain.Contact;
 import com.google.gwt.cell.client.ValueUpdater;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
@@ -46,7 +46,7 @@ public class LongPressContactCell extends AbstractEventCell<Contact> {
             public void onLongPress(LongPressOrTapGestureRecognizer.LongPressEvent event) {
                 Window.alert("hi from LongPressEvent handler");
             }
-        }, LongPressOrTapGestureRecognizer.LongPressEvent.TYPE);
+        }, LongPressOrTapGestureRecognizer.LongPressEvent.getType());
     }
 
     public interface QuoteTemplate extends XTemplates {

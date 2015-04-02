@@ -24,6 +24,9 @@ public class AuthFilter implements Filter {
   public static final String USER_KEY = "loggedInUser";
   public static final String TOKEN = "token";
   public static final String APP_NAME = "contactmgr";
+  public static final String REMOTE_LOGGING_URL = "/" + APP_NAME + "/remote_logging";
+  public static final String SIGNUP_URL = "/" + APP_NAME + "/signup";
+  public static final String LOGIN_URL = "/" + APP_NAME + "/login";
 
   private ServletContext servletContext;
   private static final ThreadLocal<HttpServletRequest> perThreadRequest = new ThreadLocal<HttpServletRequest>();
@@ -33,10 +36,10 @@ public class AuthFilter implements Filter {
     HttpServletRequest httpReq = (HttpServletRequest) req;
     HttpServletResponse httpRes = (HttpServletResponse) resp;
     perThreadRequest.set(httpReq);
-    String path = httpReq.getRequestURI().substring(((HttpServletRequest) req).getContextPath().length());
-    if (path.startsWith("/" + APP_NAME + "/login")
-            || path.startsWith("/" + APP_NAME + "/signup")
-            || path.startsWith("/" + APP_NAME + "/remote_logging")) {
+    String path = httpReq.getRequestURI().substring(httpReq.getContextPath().length());
+    if ((path.startsWith(LOGIN_URL) && "POST".equals(httpReq.getMethod()))
+            || path.startsWith(SIGNUP_URL)
+            || path.startsWith(REMOTE_LOGGING_URL)) {
       // login URLs don't require auth
       chain.doFilter(req, resp);
     } else {

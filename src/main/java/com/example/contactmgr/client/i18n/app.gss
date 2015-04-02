@@ -69,13 +69,3 @@ div label {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-#loading { /* make visible */
-    display: block;
-    /*set the div in the center of the screen*/
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    margin-left: -64px;
-}

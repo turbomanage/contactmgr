@@ -19,6 +19,17 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
 
     @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // Use this as a landing page which redirects to the home page if already logged in
+        // AuthFilter runs first and will log in user via persistent cookie if available
+        if (AuthFilter.getUser() != null) {
+            resp.sendRedirect(LoginHelper.getAppUrl(req));
+        } else {
+            resp.sendRedirect(AuthFilter.LOGIN_FORM);
+        }
+    }
+
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // Start new session
         req.getSession().invalidate();

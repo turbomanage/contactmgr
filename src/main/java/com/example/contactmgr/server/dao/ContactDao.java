@@ -1,8 +1,8 @@
 package com.example.contactmgr.server.dao;
 
-import com.example.contactmgr.app.shared.domain.Contact;
-import com.example.contactmgr.app.shared.domain.User;
-import com.example.contactmgr.common.domain.ListWrapper;
+import com.example.contactmgr.shared.domain.Contact;
+import com.example.contactmgr.shared.domain.User;
+import com.turbomanage.gwt.domain.ListWrapper;
 import com.turbomanage.gwt.server.servlet.AuthFilter;
 
 import javax.ws.rs.GET;

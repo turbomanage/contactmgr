@@ -16,7 +16,7 @@
 
 package com.example.contactmgr.server.auth;
 
-import com.example.contactmgr.app.shared.domain.User;
+import com.example.contactmgr.shared.domain.User;
 import com.example.contactmgr.server.exception.DuplicateUserException;
 import com.example.contactmgr.server.exception.RestException;
 import com.google.api.client.auth.oauth2.TokenResponseException;

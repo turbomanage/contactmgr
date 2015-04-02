@@ -1,6 +1,8 @@
 package com.turbomanage.gwt.client.ui.widget;
 
-import com.example.contactmgr.common.client.ui.web.AppStyles;
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.resources.client.ClientBundle;
+import com.google.gwt.resources.client.CssResource;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
@@ -10,12 +12,30 @@ import com.turbomanage.gwt.client.handler.ShowMessageHandler;
 
 public class MessageWidget 
 {
-	private final EventBus eventBus;
+    public static final String MESSAGE_PANEL_ID = "messagePanel";
+
+    public interface WidgetResources extends ClientBundle {
+        @Source("MessageWidget.gss")
+        WidgetStyles css();
+    }
+
+    public interface WidgetStyles extends CssResource {
+        String msgInfo();
+        String msgWarn();
+    }
+
+    private static final WidgetResources res = GWT.create(WidgetResources.class);
+
+    private final EventBus eventBus;
+
+    static {
+        res.css().ensureInjected();
+    }
 
 	public static enum MessageType 
 	{
-		INFO(AppStyles.MESSAGE_INFO),
-		WARN(AppStyles.MESSAGE_WARN);
+		INFO(res.css().msgInfo()),
+		WARN(res.css().msgWarn());
 		
 		private String styleName;
 
@@ -37,9 +57,9 @@ public class MessageWidget
 	{
 		this.eventBus = bus;
 		
-		messageText.addStyleName(AppStyles.MESSAGE_INFO);
+		messageText.addStyleName(res.css().msgInfo());
 		messageDiv.add(messageText);
-		messageDiv.getElement().setId(AppStyles.MESSAGE_PANEL_ID);
+		messageDiv.getElement().setId(MESSAGE_PANEL_ID);
 		
 		eventBus.addHandler(ShowMessageEvent.TYPE, new ShowMessageHandler()
 		{

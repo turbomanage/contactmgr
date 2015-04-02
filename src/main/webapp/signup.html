@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Consider inlining CSS to reduce the number of requested files -->
     <link type="text/css" rel="stylesheet" href="/css/site.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,400italic' rel='stylesheet' type='text/css'>
 
     <title></title>
 </head>
@@ -13,15 +14,9 @@
 
 <body onload="document.getElementById('firstName').focus();">
 
-<div id="wrap">
-    <div id="header">
-
-    </div> <!-- header -->
-
-    <div id="signup">
+<div class="wrap">
+    <div class="centered">
         <form action="/contactmgr/signup" method="post">
-            <fieldset>
-                <legend>About You</legend>
                 <div>
                     <label for="firstName">First Name (required)</label><br/>
                     <input name="firstName" id="firstName" type="text" tabindex="1"></input>
@@ -42,7 +37,6 @@
                     <br/>
                     <input type="submit" class="btn" name="go" value="Sign up!" tabindex="4"/>
                 </div>
-            </fieldset>
         </form>
     </div>
 

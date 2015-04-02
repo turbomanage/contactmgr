@@ -1,6 +1,6 @@
 package com.example.contactmgr.server.auth;
 
-import com.example.contactmgr.app.shared.domain.User;
+import com.example.contactmgr.shared.domain.User;
 import com.example.contactmgr.server.domain.AuthCookie;
 import com.example.contactmgr.server.domain.UserSession;
 import com.example.contactmgr.server.exception.DuplicateUserException;
@@ -20,7 +20,7 @@ public abstract class LoginHelper {
     private static final Logger log = Logger.getLogger( LoginHelper.class.getName() );
 
     protected static final String OAUTH_APP_NAME = "Contact Manager";
-    private static final String APP_URL = "/" + AuthFilter.APP_NAME + "/index.jsp";
+    private static final String APP_URL = "/" + AuthFilter.APP_NAME + "/index.html";
     public static final String AUTH_COOKIE_KEY = "authCookie";
     protected static final AppUserService appUserSvc = new AppUserServiceImpl();
 

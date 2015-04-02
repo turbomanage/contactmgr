@@ -1,7 +1,7 @@
 package com.example.contactmgr.server.dao;
 
-import com.example.contactmgr.app.shared.domain.Contact;
-import com.example.contactmgr.app.shared.domain.User;
+import com.example.contactmgr.shared.domain.Contact;
+import com.example.contactmgr.shared.domain.User;
 import com.example.contactmgr.server.domain.UserSession;
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;

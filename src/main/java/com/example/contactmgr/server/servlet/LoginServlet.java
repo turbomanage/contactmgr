@@ -1,6 +1,6 @@
 package com.example.contactmgr.server.servlet;
 
-import com.example.contactmgr.app.shared.domain.User;
+import com.example.contactmgr.shared.domain.User;
 import com.example.contactmgr.server.auth.LoginHelper;
 import com.example.contactmgr.server.domain.AuthCookie;
 import com.example.contactmgr.server.domain.UserSession;

@@ -32,8 +32,8 @@ input[type="text"],input[type="password"] {
 }
 
 input[type="checkbox"] {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1rem;
+    width: 1rem;
     vertical-align: middle;
     margin: 0;
     padding: 0;
@@ -56,126 +56,17 @@ div label {
     display: block;
 }
 
-#wrap {
+.wrap {
     position: absolute;
     height: 100%;
     width: 100%;
     background-color: #004d40;
 }
 
-#main {
+.centered {
     width: 70%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-#loading { /* make visible */
-    display: block;
-    /*set the div in the center of the screen*/
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    margin-left: -64px;
-}
-
-#banner {
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
-}
-
-#connectBanner h1 {
-    font-size: 2em;
-    color: white;
-    padding-bottom: 20px;
-}
-
-#banner h1 {
-	font-size: 2em;
-	color: white;
-}
-
-#banner h2 {
-	font-size: 2em;
-	color: #ccf;
-}
-
-#banner h3 {
-    font-size: 2em;
-    color: #336699;
-    padding-bottom: 1em;
-}
-
-#banner-button-box {
-    position: relative;
-    text-align: center;
-    width: 80%;
-    background-color: white;
-    border-radius: 20px;
-    padding: 20px;
-}
-
-.button
-{
-    background-color            : #6CC655;
-    color                       : white;
-    margin-bottom               : 10px;
-    border-radius               : 3px;
-    padding-left                : 44px;
-    background-position         : 7px 7px;
-    background-size             : 30px 30px;
-    background-repeat           : no-repeat;
-    cursor                      : pointer;
-    display                     : block;
-    text-decoration             : none;
-}
-.button.google
-{
-    background-color            : #DF4B31;
-    color                       : white;
-    background-image            : url('../images/google.png');
-}
-
-.button.google:hover
-{
-    background-color            : #B9341D;
-}
-.button.twitter
-{
-    background-color            : #55ACEE;
-    color                       : white;
-    background-image            : url('../images/twitter.png');
-}
-
-.button.twitter:hover
-{
-    background-color            : #178DE8;
-}
-.button.facebook
-{
-    background-color            : #4963A4;
-    color                       : white;
-    background-image            : url('../images/facebook.png');
-}
-.button.facebook:hover
-{
-    background-color            : #3A4F82;
-}
-
-.button a {
-	color: white;
-	text-decoration: none;
-	font-size: 1.3em;
-	font-weight: bold;
-	text-align: center;
-	vertical-align: middle;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
-	background-color: #69f;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	padding-left: 25px;
-	padding-right: 25px;
 }

@@ -269,6 +269,11 @@
                     <runTarget>/index.html</runTarget>
                     <launcherDir>${project.build.directory}/${project.build.finalName}</launcherDir>
                     <extraJvmArgs>-Xmx1g -Xms64M</extraJvmArgs>
+                    <modules>
+                        <modules>com.googlecode.mgwt.ui.Animation</modules>
+                        <modules>com.example.contactmgr.contactmgr</modules>
+                        <modules>com.turbomanage.gwt.Util</modules>
+                    </modules>
                 </configuration>
             </plugin>
 

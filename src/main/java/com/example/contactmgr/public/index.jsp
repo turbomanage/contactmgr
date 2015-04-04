@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-<!-- Consider inlining CSS to reduce the number of requested files -->
-<link type="text/css" rel="stylesheet" href="/css/site.css">
 
 <style type="text/css">
     #loading {

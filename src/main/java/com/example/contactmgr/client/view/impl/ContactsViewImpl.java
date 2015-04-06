@@ -1,7 +1,13 @@
 package com.example.contactmgr.client.view.impl;
 
+import com.example.contactmgr.client.App;
+import com.example.contactmgr.client.place.ContactDetailPlace;
 import com.example.contactmgr.client.view.ContactsView;
 import com.example.contactmgr.shared.domain.Contact;
+import com.google.gwt.cell.client.Cell;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.dom.client.NativeEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.turbomanage.gwt.client.ViewImpl;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -19,9 +25,6 @@ import com.google.gwt.view.client.ListDataProvider;
  */
 public class ContactsViewImpl extends ViewImpl<ContactsView.Delegate> implements ContactsView {
 
-    // init store
-    private final ListDataProvider<Contact> contactStore = new ListDataProvider<Contact>();
-
     interface OurUiBinder extends UiBinder<Widget, ContactsViewImpl> { }
     private static OurUiBinder ourUiBinder = GWT.create(OurUiBinder.class);
 
@@ -30,7 +33,7 @@ public class ContactsViewImpl extends ViewImpl<ContactsView.Delegate> implements
 
     @UiFactory
     public CellTable<Contact> makeContactsTable() {
-        CellTable<Contact> contactsTable = new CellTable<Contact>();
+        final CellTable<Contact> contactsTable = new CellTable<Contact>();
         contactsTable.addColumn(new TextColumn<Contact>() {
             @Override
             public String getValue(Contact contact) {
@@ -43,8 +46,27 @@ public class ContactsViewImpl extends ViewImpl<ContactsView.Delegate> implements
                 return contact.getLastName();
             }
         });
-        contactStore.addDataDisplay(contactsTable);
+        getContactStore().addDataDisplay(contactsTable);
+        contactsTable.addDomHandler(new ClickHandler() {
+          @Override
+          public void onClick(ClickEvent clickEvent) {
+            // I so love GWT
+            Element element = Element.as(clickEvent.getNativeEvent().getEventTarget());
+            Element row = element.getParentElement().getParentElement();
+            int rowCount = contactCellTable.getRowCount();
+            for (int i = 0; i < rowCount ; i++) {
+              if (contactCellTable.getRowElement(i) == row) {
+                App.placeController().goTo(new ContactDetailPlace(i));
+                return;
+              }
+            }
+          }
+        }, ClickEvent.getType());
         return contactsTable;
+    }
+
+    private ListDataProvider getContactStore() {
+      return App.model().getContactStore();
     }
 
     public ContactsViewImpl() {
@@ -55,4 +77,5 @@ public class ContactsViewImpl extends ViewImpl<ContactsView.Delegate> implements
     public void onClickNewContact(ClickEvent e) {
         getPresenter().newContact();
     }
+
 }

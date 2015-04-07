@@ -35,7 +35,8 @@ public class ContactsViewImpl extends ViewImpl<ContactsView.Delegate> implements
 
     @UiFactory
     public ListView<Contact, Contact> makeListView() {
-        final ListView listView = new ListView(App.model().getContactStore(), new IdentityValueProvider<Contact>(), new LongPressContactCell(this));
+        final ListView listView = new ListView(App.model().getContactStore(),
+                new IdentityValueProvider<Contact>(), new LongPressContactCell(this));
         listView.addDomHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent clickEvent) {

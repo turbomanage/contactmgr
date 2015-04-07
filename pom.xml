@@ -24,7 +24,6 @@
         <!-- testing -->
         <selenium.version>2.43.1</selenium.version>
         <selenium.skip>false</selenium.skip>
-        <gwt.driver.version>0.0.1-SNAPSHOT</gwt.driver.version>
         <gwt.compiler.strict>true</gwt.compiler.strict>
         <gwt.test.testTimeOut>480</gwt.test.testTimeOut>
     </properties>
@@ -228,12 +227,6 @@
             <artifactId>selenium-server</artifactId>
             <version>${selenium.version}</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.senchalabs.gwt</groupId>
-            <artifactId>gwt-driver</artifactId>
-            <version>${gwt.driver.version}</version>
-            <scope>provided</scope>
         </dependency>
 
     </dependencies>

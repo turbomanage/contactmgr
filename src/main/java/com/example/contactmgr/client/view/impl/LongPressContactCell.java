@@ -32,7 +32,8 @@ public class LongPressContactCell extends AbstractEventCell<Contact> {
         addCellGestureAdapter(new LongPressOrTapGestureRecognizer.CellLongPressOrTapGestureRecognizer<Contact>() {
             @Override
             protected void onLongPress(TouchData touch, Context context, Element parent, Contact value, ValueUpdater<Contact> updater) {
-                LongPressContactCell.this.cellEventHandler.onCellLongPress(parent, value);
+              Window.alert("hi fron onLongPress");
+//                LongPressContactCell.this.cellEventHandler.onCellLongPress(parent, value);
             }
 
             @Override

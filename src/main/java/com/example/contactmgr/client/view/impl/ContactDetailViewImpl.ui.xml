@@ -4,29 +4,52 @@
 
     <ui:style>
         .container {
-            padding: 10px;
-            background-color: #ddd;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+        }
+        .button {
+            background-color: #1790D2;
+            border: 0;
+            border-color: transparent;
+            border-radius: 7px;
+            color: #fff;
+            float: right;
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 0.1rem;
+            padding: 0.3rem;
+            text-align: right
+        }
+        .centered {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
         }
 
+        .input {
+            background-color: white;
+            border: 0;
+            border-radius: 7px;
+            height: 1.2rem;
+            width: 100%;
+        }
     </ui:style>
 
     <g:FlowPanel styleName="{style.container}">
-        <g:VerticalPanel>
-            <g:HorizontalPanel>
-                <g:Label>First name</g:Label>
-                <g:TextBox ui:field="firstName"></g:TextBox>
-            </g:HorizontalPanel>
-           <g:HorizontalPanel>
-               <g:Label>Last name</g:Label>
-               <g:TextBox ui:field="lastName"></g:TextBox>
-           </g:HorizontalPanel>
-            <g:HorizontalPanel>
-                <g:Label>Email</g:Label>
-                <g:TextBox ui:field="email"></g:TextBox>
-            </g:HorizontalPanel>
-        </g:VerticalPanel>
-        <g:Button ui:field="saveButton">Save</g:Button>
-        <g:Button ui:field="cancelButton">Cancel</g:Button>
+        <g:FlowPanel styleName="{style.centered}">
+            <g:Label>First name</g:Label>
+            <g:TextBox ui:field="firstName" styleName="{style.input}"></g:TextBox>
+            <g:Label>Last name</g:Label>
+            <g:TextBox ui:field="lastName" styleName="{style.input}"></g:TextBox>
+            <g:Label>Email</g:Label>
+            <g:TextBox ui:field="email" styleName="{style.input}"></g:TextBox>
+            <g:Button ui:field="cancelButton" styleName="{style.button}">Cancel</g:Button>
+            <g:Button ui:field="saveButton" styleName="{style.button}">Save</g:Button>
+        </g:FlowPanel>
+
     </g:FlowPanel>
 
 </ui:UiBinder>

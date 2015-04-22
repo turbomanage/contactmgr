@@ -24,6 +24,9 @@ public class ContactDetailViewImpl extends ViewImpl<ContactDetailView.Delegate> 
 
     public ContactDetailViewImpl() {
         initWidget(ourUiBinder.createAndBindUi(this));
+        firstName.getElement().setPropertyString("placeholder", " First name...");
+        lastName.getElement().setPropertyString("placeholder", " Last name...");
+        email.getElement().setPropertyString("placeholder", " Email...");
     }
 
     @UiField

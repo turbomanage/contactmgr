@@ -36,5 +36,4 @@
 
 	<source path="shared" />
 	<source path="client" />
-    <collapse-all-properties />
 </module>

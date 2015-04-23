@@ -263,9 +263,10 @@
                     <launcherDir>${project.build.directory}/${project.build.finalName}</launcherDir>
                     <extraJvmArgs>-Xmx1g -Xms64M</extraJvmArgs>
                     <modules>
-                        <modules>com.googlecode.mgwt.ui.Animation</modules>
-                        <modules>com.example.contactmgr.contactmgr</modules>
-                        <modules>com.turbomanage.gwt.Util</modules>
+                        <module>com.example.contactmgr.contactmgr-dev</module>
+                        <!-- For GPE -->
+                        <module>com.googlecode.mgwt.ui.Animation</module>
+                        <module>com.turbomanage.gwt.Util</module>
                     </modules>
                 </configuration>
             </plugin>
@@ -363,6 +364,9 @@
                             <style>OBF</style>
                             <compileReport>true</compileReport>
                             <extraJvmArgs>-Xmx1g -Xms64M</extraJvmArgs>
+                            <modules>
+                                <module>com.example.contactmgr.contactmgr</module>
+                            </modules>
                         </configuration>
                         <executions>
                             <execution>

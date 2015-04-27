@@ -262,6 +262,8 @@
                     <runTarget>/index.html</runTarget>
                     <launcherDir>${project.build.directory}/${project.build.finalName}</launcherDir>
                     <extraJvmArgs>-Xmx1g -Xms64M</extraJvmArgs>
+                    <!-- Doesn't affect super dev mode, only gwt:compile -->
+                    <draftCompile>true</draftCompile>
                     <modules>
                         <module>com.example.contactmgr.contactmgr-dev</module>
                         <!-- For GPE -->

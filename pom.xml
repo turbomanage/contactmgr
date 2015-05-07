@@ -77,11 +77,12 @@
             <artifactId>appengine-api-labs</artifactId>
             <version>${appengine.target.version}</version>
         </dependency>
+        <!-- For GPE -->
         <dependency>
             <groupId>com.google.appengine</groupId>
-            <artifactId>appengine-tools-sdk</artifactId>
+            <artifactId>appengine-java-sdk</artifactId>
             <version>${appengine.target.version}</version>
-            <scope>test</scope>
+            <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.google.gwt</groupId>

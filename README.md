@@ -12,15 +12,14 @@ Use the [issue tracker](https://github.com/turbomanage/contactmgr/issues) to rep
  1. If you don't already have it, [install Maven 3](http://maven.apache.org/download.cgi).
 
 ### Run the sample ###
- 1. ```mvn -Prelease clean package appengine:devserver```
- 2. Browse to http://localhost:8080/contactmgr/login
+ 1. ```mvn -Prelease clean package appengine:devserver``` (Release profile builds the obfuscated GWT app)
+ 2. Browse to http://localhost:8080/contactmgr/index.jsp
 
 ### Run the sample in GWT super dev mode ###
- 1. ```mvn -Prelease clean package appengine:devserver_start``` (starts in background)
- 1. ```mvn gwt:run-codeserver```
- 1. Wait for the message "Listening for transport dt_socket at address: 8000"
- 1. Configure a Java remote debugger in your IDE on port 8000 and launch it to attach.
- 1. The standalone GWT console will appear and you can launch the browser from there.
+ 1. ```mvn clean package appengine:devserver_start``` (starts in background)
+ 1. ```mvn gwt:run-codeserver``` (starts super dev mode)
+ 1. To debug on the server side, wait for the message "Listening for transport dt_socket at address: 8000" then configure a Java remote debugger in your IDE on port 8000 and launch it to attach.
+ 1. To debug the client, browse to http://localhost:8080/contactmgr/index.jsp. Hit Ctrl+P (Cmd+P) in Chrome dev tools to open a Java file, set breakpoints, etc.
  
  Alternatively, you can run GWT dev mode directly with Google Plugin
  for Eclipse or IntelliJ full edition (see further instructions).
@@ -29,16 +28,16 @@ Use the [issue tracker](https://github.com/turbomanage/contactmgr/issues) to rep
  1. Import the project into IntelliJ as a Maven project.
  1. If you have IntelliJ full edition, you can run GWT dev mode in the IDE as usual.
 
- Note: In the IntelliJ run configuration, you may want to add the following VM options:
- * ```-Xmx2g``` Give dev mode more RAM
- * ```-Ddatastore.backing_store=path/to/contactmgr/local_db.bin``` Prevent the datastore getting wiped from the target dir
+Note: In the IntelliJ run configuration, you may want to add the following VM options:
+* ```-Xmx2g``` Give dev mode more RAM
+* ```-Ddatastore.backing_store=path/to/contactmgr/local_db.bin``` Prevent the datastore getting wiped from the target dir
 
- In addition, the following Dev Mode parameter will allow you to browse from a mobile device on the same wifi network:
- * ```-bindAddress 0.0.0.0```
+In addition, the following Dev Mode parameter will allow you to browse from a mobile device on the same wifi network:
+* ```-bindAddress 0.0.0.0```
 
- Finally, in the run configuration dialog, select the specific Server version in the POM; for example, App Engine 1.9.18.
+Finally, in the run configuration dialog, select the specific Server version in the POM; for example, App Engine 1.9.18.
 
- The start page is contactmgr/login.
+The start page is contactmgr/login.
 
 ### Setup with Eclipse ###
  1. Install the [Google Plugin for Eclipse](https://developers.google.com/eclipse/docs/download).

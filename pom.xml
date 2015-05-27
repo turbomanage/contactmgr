@@ -27,14 +27,14 @@
         <gwt.compiler.strict>true</gwt.compiler.strict>
         <gwt.test.testTimeOut>480</gwt.test.testTimeOut>
     </properties>
-    <repositories>
-        <repository>
-            <id>sencha-gxt-repository</id>
-            <name>Sencha GXT Repository</name>
-            <!-- Commercial (with Support) -->
-            <url>https://maven.sencha.com/repo/gxt-support-commercial-release</url>
-        </repository>
-    </repositories>
+    <!--<repositories>-->
+        <!--<repository>-->
+            <!--<id>sencha-gxt-repository</id>-->
+            <!--<name>Sencha GXT Repository</name>-->
+            <!--&lt;!&ndash; Commercial (with Support) &ndash;&gt;-->
+            <!--<url>https://maven.sencha.com/repo/gxt-support-commercial-release</url>-->
+        <!--</repository>-->
+    <!--</repositories>-->
     <dependencies>
         <!-- General dependencies for standard applications -->
         <dependency>
@@ -234,37 +234,6 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.1</version>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>2.4.2</version>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-            <!--Not actually needed for GAE because deploys from app dir, but useful config example-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.4</version>
-                <configuration>
-                    <packagingExcludes>WEB-INF/classes/**/client/**,WEB-INF/repo/**,WEB-INF/lib/gwt*</packagingExcludes>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>2.5</version>
-            </plugin>
             <!-- IDE -->
             <plugin>
                 <groupId>com.google.appengine</groupId>
